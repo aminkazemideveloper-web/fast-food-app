@@ -3,10 +3,17 @@ import styles from "./ProductButton.module.css";
 import { useState } from "react";
 import MingcuteShoppingBag2Line from "../../../../../../icons/MingcuteShoppingBag2Line";
 import Snipper from "../../../../../shared/Snipper/Snipper";
+import type { ProductType } from "../../../../../../types/product-type";
 
-function ProductButton() {
+type Props = {
+  onAdd: (product: ProductType) => void;
+  product: ProductType;
+};
+
+function ProductButton({ onAdd, product }: Props) {
   const [isLoading, setIsLoading] = useState(false);
   const handleClick = () => {
+    onAdd(product);
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);

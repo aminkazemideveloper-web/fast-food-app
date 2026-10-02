@@ -8,6 +8,7 @@ import HeaderSection from "../../ui/HeaderSection/HeaderSection";
 import ProductCard from "../../ui/cards/ProductCard/ProductCard";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
+import { useFoodStore } from "../../../stores/food-store";
 
 type Props = {
   products: ProductType[];
@@ -17,8 +18,11 @@ type Props = {
 function Order({ products, categories }: Props) {
   const location = useLocation();
 
+  const cart = useFoodStore((state) => state.cart);
+
+  console.log(cart);
+
   useEffect(() => {
-    console.log("location", location);
     const hashes = location.hash;
     if (!hashes) return;
 
