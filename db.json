@@ -1,0 +1,386 @@
+{
+  "navbar": [
+    {
+      "id": "1",
+      "label": "صفحه اصلی",
+      "link": "/home",
+      "icon": "MingcuteHome3Line"
+    },
+    {
+      "id": "2",
+      "label": "شعبه ها",
+      "link": "/branchs",
+      "icon": "MingcuteChartBarLine"
+    },
+    {
+      "id": "3",
+      "label": "وبلاگ",
+      "link": "/blogs",
+      "icon": "MingcuteNewdotLine"
+    },
+    {
+      "id": "4",
+      "label": "داستان شیلا",
+      "link": "/shopSotry",
+      "icon": "MingcuteCalendarTimeAddLine"
+    },
+    {
+      "id": "5",
+      "label": "ارتباط با ما",
+      "link": "/contact",
+      "icon": "MingcuteUserQuestionFill"
+    },
+    {
+      "id": "6",
+      "label": "فرصت های شغلی",
+      "link": "/career",
+      "icon": "MingcuteUserQuestionFill"
+    },
+    {
+      "id": "7",
+      "label": "سفارش سازمانی",
+      "link": "/saleB2B",
+      "icon": "MingcutePencil3AiLine"
+    }
+  ],
+
+  "banners": [
+    {
+      "id": "1",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/32758/%D8%A8%D9%86%D8%B1-%D9%85%D8%B1%D8%A8%D8%B9.jpg",
+      "link": "/order"
+    },
+    {
+      "id": "2",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/33095/new%20prou.jpg",
+      "link": "/order"
+    },
+    {
+      "id": "3",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/32692/%D8%A8%D9%86%D8%B1%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%BE%DB%8C%D8%AA%D8%B2%D8%A7%201000-400.jpg",
+      "link": "/order"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1569/asset%2067.jpg",
+      "title": "25 سال سابقه"
+    },
+
+    {
+      "id": "2",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1570/asset%2063.jpg",
+      "title": "+70 شعبه در تهران و البرز"
+    },
+    {
+      "id": "3",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1571/asset%2066.jpg",
+      "title": "ارسال سریع"
+    },
+
+    {
+      "id": "4",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1572/asset%2064.jpg",
+      "title": "کیفیت یکسان در تمام شعب"
+    },
+    {
+      "id": "5",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1573/asset%2065.jpg",
+      "title": "کارخانه تولید مواد اولیه"
+    }
+  ],
+  "categories": [
+    {
+      "id": 7,
+      "title": "کمبو",
+      "slug": "combo",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/33078/food.jpg"
+    },
+    {
+      "id": 1,
+      "title": "پیتزا",
+      "slug": "pizza",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21981/makhlout-plus-23.jpg"
+    },
+    {
+      "id": 2,
+      "title": "برگر",
+      "slug": "burger",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22261/fresh-cheez-burger-plus.jpg"
+    },
+    {
+      "id": 3,
+      "title": "سوخاری",
+      "slug": "fried-chicken",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22452/shokhari8-tike.jpg"
+    },
+    {
+      "id": 4,
+      "title": "پیش‌غذا",
+      "slug": "appetizer",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21803/mashroom-frize.jpg"
+    },
+    {
+      "id": 5,
+      "title": "ساندویچ و رپ",
+      "slug": "sandwich",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/32871/ezar-sokhari-paniri.jpg"
+    },
+    {
+      "id": 6,
+      "title": "نوشیدنی",
+      "slug": "drink",
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21773/coca-cola.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 701,
+      "title": "کمبو کلاسیک",
+      "price": 399000,
+      "mainPrice": 470000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/33078/food.jpg",
+      "description": "چیزبرگر کلاسیک، سیب‌زمینی و نوشابه",
+      "rating": 4.9,
+      "stock": 12
+    },
+    {
+      "id": 702,
+      "title": "کمبو سوخاری",
+      "price": 449000,
+      "mainPrice": 520000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22278/combo-2nafar%202.jpg",
+      "description": "فیله سوخاری، سیب‌زمینی، سس و نوشابه",
+      "rating": 3.8,
+      "stock": 10
+    },
+    {
+      "id": 703,
+      "title": "کمبو سوخاری",
+      "price": 449000,
+      "mainPrice": 520000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22278/combo-2nafar%202.jpg",
+      "description": "فیله سوخاری، سیب‌زمینی، سس و نوشابه",
+      "rating": 3.8,
+      "stock": 10
+    },
+    {
+      "id": 704,
+      "title": "کمبو سوخاری",
+      "price": 449000,
+      "mainPrice": 520000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22278/combo-2nafar%202.jpg",
+      "description": "فیله سوخاری، سیب‌زمینی، سس و نوشابه",
+      "rating": 3.8,
+      "stock": 10
+    },
+    {
+      "id": 705,
+      "title": "کمبو سوخاری",
+      "price": 449000,
+      "mainPrice": 520000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22278/combo-2nafar%202.jpg",
+      "description": "فیله سوخاری، سیب‌زمینی، سس و نوشابه",
+      "rating": 3.8,
+      "stock": 10
+    },
+    {
+      "id": 706,
+      "title": "کمبو سوخاری",
+      "price": 449000,
+      "mainPrice": 520000,
+      "categoryId": 7,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22278/combo-2nafar%202.jpg",
+      "description": "فیله سوخاری، سیب‌زمینی، سس و نوشابه",
+      "rating": 3.8,
+      "stock": 10
+    },
+    {
+      "id": 101,
+      "title": "پیتزا پپرونی",
+      "price": 389000,
+      "mainPrice": 450000,
+      "categoryId": 1,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21981/makhlout-plus-23.jpg",
+      "description": "پیتزا با پپرونی، پنیر موزارلا و سس مخصوص",
+      "rating": 4.8,
+      "stock": 15
+    },
+    {
+      "id": 102,
+      "title": "پیتزا مرغ و قارچ",
+      "price": 429000,
+      "mainPrice": 490000,
+      "categoryId": 1,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21672/chicken.jpg",
+      "description": "مرغ گریل شده، قارچ تازه و پنیر موزارلا",
+      "rating": 4.7,
+      "stock": 12
+    },
+    {
+      "id": 103,
+      "title": "پیتزا چهار پنیر",
+      "price": 469000,
+      "mainPrice": 520000,
+      "categoryId": 1,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21804/makhlot.jpg",
+      "description": "ترکیب چهار نوع پنیر با سس مخصوص",
+      "rating": 4.9,
+      "stock": 10
+    },
+
+    {
+      "id": 201,
+      "title": "چیزبرگر کلاسیک",
+      "price": 289000,
+      "mainPrice": 330000,
+      "categoryId": 2,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22261/fresh-cheez-burger-plus.jpg",
+      "description": "برگر گوشت، پنیر چدار، کاهو، گوجه و سس مخصوص",
+      "rating": 4.8,
+      "stock": 20
+    },
+    {
+      "id": 202,
+      "title": "دابل چیزبرگر",
+      "price": 379000,
+      "mainPrice": 430000,
+      "categoryId": 2,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/32783/fresh-mashrom-burger.jpg",
+      "description": "دو عدد برگر گوشت با پنیر چدار و سس مخصوص",
+      "rating": 4.9,
+      "stock": 14
+    },
+    {
+      "id": 203,
+      "title": "چیکن برگر",
+      "price": 269000,
+      "mainPrice": 310000,
+      "categoryId": 2,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21749/morgh.jpg",
+      "description": "فیله مرغ سوخاری، کاهو، خیارشور و سس مخصوص",
+      "rating": 4.6,
+      "stock": 18
+    },
+
+    {
+      "id": 301,
+      "title": "فیله سوخاری",
+      "price": 319000,
+      "mainPrice": 360000,
+      "categoryId": 3,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22452/shokhari8-tike.jpg",
+      "description": "فیله مرغ سوخاری ترد با سس مخصوص",
+      "rating": 4.7,
+      "stock": 16
+    },
+    {
+      "id": 302,
+      "title": "بال مرغ اسپایسی",
+      "price": 299000,
+      "mainPrice": 340000,
+      "categoryId": 3,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21724/chiken-strips.jpg",
+      "description": "بال مرغ ترد با سس اسپایسی",
+      "rating": 4.8,
+      "stock": 13
+    },
+    {
+      "id": 303,
+      "title": "ناگت مرغ",
+      "price": 189000,
+      "mainPrice": 220000,
+      "categoryId": 3,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21728/paksokhari.jpg",
+      "description": "ناگت مرغ سوخاری همراه با سس مخصوص",
+      "rating": 4.5,
+      "stock": 25
+    },
+
+    {
+      "id": 401,
+      "title": "سیب‌زمینی مخصوص",
+      "price": 149000,
+      "mainPrice": 175000,
+      "categoryId": 4,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21707/alfredo-cheez-friz.jpg",
+      "description": "سیب‌زمینی سرخ شده با پنیر و سس مخصوص",
+      "rating": 4.7,
+      "stock": 30
+    },
+    {
+      "id": 402,
+      "title": "حلقه پیاز",
+      "price": 129000,
+      "mainPrice": 150000,
+      "categoryId": 4,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21803/mashroom-frize.jpg",
+      "description": "حلقه‌های پیاز سوخاری و ترد",
+      "rating": 4.5,
+      "stock": 22
+    },
+    {
+      "id": 403,
+      "title": "استیک پنیر",
+      "price": 179000,
+      "mainPrice": 210000,
+      "categoryId": 4,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21984/salad-sezar-giril.jpg",
+      "description": "چوب‌های پنیر موزارلا سوخاری",
+      "rating": 4.6,
+      "stock": 18
+    },
+
+    {
+      "id": 501,
+      "title": "چیکن رپ",
+      "price": 239000,
+      "mainPrice": 275000,
+      "categoryId": 5,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/32871/ezar-sokhari-paniri.jpg",
+      "description": "مرغ گریل شده، کاهو، گوجه و سس مخصوص داخل نان رپ",
+      "rating": 4.6,
+      "stock": 17
+    },
+    {
+      "id": 502,
+      "title": "رپ سوخاری",
+      "price": 249000,
+      "mainPrice": 290000,
+      "categoryId": 5,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21726/hotplus.jpg",
+      "description": "مرغ سوخاری، پنیر، کاهو و سس مخصوص",
+      "rating": 4.7,
+      "stock": 15
+    },
+
+    {
+      "id": 601,
+      "title": "نوشابه",
+      "price": 45000,
+      "mainPrice": 50000,
+      "categoryId": 6,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21773/coca-cola.jpg",
+      "description": "نوشابه گازدار",
+      "rating": 4.3,
+      "stock": 50
+    },
+    {
+      "id": 602,
+      "title": "لیموناد",
+      "price": 79000,
+      "mainPrice": 90000,
+      "categoryId": 6,
+      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22131/limonadeh-ghoti-khoshgovar.jpg",
+      "description": "لیموناد خنک و تازه",
+      "rating": 4.6,
+      "stock": 35
+    }
+  ]
+}

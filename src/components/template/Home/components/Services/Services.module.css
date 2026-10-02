@@ -1,0 +1,33 @@
+.services {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+
+  .wrapper {
+    display: flex;
+    width: max-content;
+    animation: infiniteRoll 20s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-inline-end: 2rem;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes infiniteRoll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(50% - 20rem));
+  }
+}

@@ -1,0 +1,30 @@
+.written {
+  display: grid;
+  text-align: center;
+  gap: 0.2rem;
+  block-size: 50px;
+
+  .title {
+    font-size: var(--font-size-400);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .salle {
+    display: flex;
+    gap: 1ch;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-300);
+    .price {
+      font-size: 0.9em;
+    }
+    .main-price {
+      color: var(--color-primary);
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+  }
+}
+
+

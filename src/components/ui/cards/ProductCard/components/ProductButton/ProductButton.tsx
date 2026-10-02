@@ -1,0 +1,36 @@
+import clsx from "clsx";
+import styles from "./ProductButton.module.css";
+import { useState } from "react";
+import MingcuteShoppingBag2Line from "../../../../../../icons/MingcuteShoppingBag2Line";
+import Snipper from "../../../../../shared/Snipper/Snipper";
+
+function ProductButton() {
+  const [isLoading, setIsLoading] = useState(false);
+  const handleClick = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
+  return (
+    <button
+      onClick={handleClick}
+      disabled={isLoading}
+      className={clsx(styles.btn, isLoading && styles.loading)}
+    >
+      {isLoading ? (
+        <div className={styles.pending}>
+          <Snipper />
+          در حال افزودن...
+        </div>
+      ) : (
+        <div className={styles.pending}>
+          <MingcuteShoppingBag2Line />
+          افزودن
+        </div>
+      )}
+    </button>
+  );
+}
+
+export default ProductButton;

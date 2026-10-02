@@ -1,0 +1,86 @@
+.navbar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  block-size: 100%;
+  inline-size: 38rem;
+
+  .item {
+    font-size: var(--font-size-400);
+  }
+
+  .link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    corner-shape: round;
+    text-wrap: nowrap;
+
+    padding: 0.4rem 0.5rem;
+    color: var(--color-primary-contrast);
+
+    &:hover {
+      transform: translateY(-2px);
+      color: var(--color-primary);
+    }
+
+    &.active {
+      font-weight: 700;
+      overflow: hidden;
+      position: relative;
+
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+
+      border-radius: 1rem;
+      text-decoration: none;
+
+      transition: all 0.2s ease;
+
+      background-size: 300% 100%;
+      background: linear-gradient(
+        to top left,
+        var(--color-primary-dark),
+        var(--color-primary-fade),
+        var(--color-primary-light)
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      animation: gradient 1s linear infinite;
+    }
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) {
+}
+
+/* desktop size */
+@media screen and (min-width: 1024px) {
+  .navbar {
+    display: flex;
+  }
+}
+
+@keyframes smooth {
+  from {
+    left: -40%;
+  }
+  to {
+    left: 120%;
+  }
+}
+
+@keyframes gradient {
+  to {
+    background-position: 300% 0;
+  }
+}

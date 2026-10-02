@@ -1,0 +1,88 @@
+.floating-card {
+  position: absolute;
+
+  inset-inline-end: 2%;
+  inset-block-end: 12%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 0.7rem 1rem;
+
+  border-radius: 1rem;
+
+  background: color-mix(in srgb, var(--color-backdrup) 75%, transparent);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+  animation: floating-card 4s ease-in-out infinite;
+
+  z-index: 3;
+}
+
+.floating-card > span {
+  display: grid;
+
+  place-items: center;
+
+  inline-size: 2.2rem;
+  block-size: 2.2rem;
+
+  border-radius: 0.7rem;
+
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+.floating-card div {
+  display: grid;
+
+  gap: 0.1rem;
+}
+
+.floating-card strong {
+  font-size: var(--font-size-300);
+
+  color: var(--color-text);
+}
+
+.floating-card small {
+  color: var(--color-text--sub);
+
+  font-size: var(--font-size-200);
+}
+
+@keyframes floating-card {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+  .floating-card {
+    inset-inline-end: 8%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .floating-card {
+    inset-inline-end: 0;
+  }
+}

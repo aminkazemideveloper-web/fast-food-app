@@ -1,0 +1,224 @@
+.navbar {
+  z-index: 50;
+  position: fixed;
+  top: -30%;
+  left: -5%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  min-block-size: calc(100dvh - 30rem);
+  inline-size: auto;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-heavy);
+  background-color: var(--color-backdrup);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+  transform: translateX(-100px);
+  opacity: 0;
+
+  &.isOpen {
+    animation: navbareffectEnter 0.3s forwards;
+  }
+
+  &.isclose {
+    .navbar {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+  }
+
+  &.collapse {
+    inline-size: 12rem;
+    .header {
+      .btn {
+        > svg {
+          transform: rotate(0);
+        }
+      }
+    }
+    .nav {
+      padding-inline: 1rem;
+      margin-block-start: 1rem;
+      .item {
+        min-block-size: 3rem;
+        .link {
+          .icon {
+            font-size: var(--font-size-500);
+            box-shadow: none;
+            block-size: 1.5rem;
+            inline-size: 1.5rem;
+            border-radius: 0.3rem;
+            transform: translateX(-200%);
+          }
+          .label {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(10%);
+          }
+        }
+      }
+    }
+  }
+  .header {
+    position: relative;
+    inline-size: 100%;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--color-primary);
+    border-radius: 2rem 2rem 0 0;
+
+    .btn {
+      position: absolute;
+      top: 100%;
+      color: var(--color-primary);
+      background: linear-gradient(
+        to top right,
+        var(--color-primary) 5%,
+        var(--color-primary-contrast) 55%,
+        var(--color-primary-contrast) 100%,
+        var(--color-primary)
+      );
+      right: calc(-2 * 0.5rem);
+      > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.nav {
+  display: grid;
+  gap: 0.5rem;
+  margin-block-end: 4rem;
+  margin-block-start: 1rem;
+
+  .item {
+    min-block-size: 3rem;
+    inline-size: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    block-size: 100%;
+    font-size: var(--font-size-300);
+
+    .link {
+      position: relative;
+      block-size: 100%;
+      inline-size: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-contrast);
+      transition: all 0.2s ease-in-out;
+      font-size: 1em;
+      font-weight: 400;
+      padding: 0.3rem;
+      opacity: 1;
+
+      .icon {
+        opacity: 1;
+        position: relative;
+        font-size: var(--font-size-600);
+        box-shadow: 0 0 6px var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* color: var(--color-primary-fade); */
+        background-color: transparent;
+        inline-size: 3rem;
+        block-size: 3rem;
+        border-radius: 999rem;
+        transform: translateX(0);
+        transition: all 0.2s ease;
+      }
+
+      .label {
+        position: absolute;
+        transform: translateX(-10%);
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+        .icon {
+          transform: scale(1.1);
+          box-shadow: none;
+          opacity: 1;
+        }
+        .label {
+          transform: translateY(100%);
+          visibility: visible;
+          opacity: 0.5;
+        }
+      }
+
+      &.active {
+        color: var(--color-primary-hover);
+        transform: scale(1.1);
+        font-weight: 500;
+        .label {
+          visibility: visible;
+          transform: translateY(100%);
+          opacity: 1;
+        }
+        .icon {
+          box-shadow: none;
+          transform: translateY(0%);
+          color: var(--color-primary-hover);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@keyframes navbareffectEnter {
+  from {
+    transform: translateX(-100px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navbareffectExit {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes textHidden {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(30px);
+    opacity: 1;
+  }
+}
+@keyframes textShow {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+}

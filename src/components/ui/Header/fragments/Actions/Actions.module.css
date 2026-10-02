@@ -1,0 +1,35 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  .action {
+    display: block;
+    padding: 0.41rem 0.7rem;
+    font-size: var(--font-size-300);
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+    border-radius: 999rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-normal);
+    &:hover {
+      background-color: var(--color-primary-hover);
+      box-shadow: var(--shadow-heavy);
+    }
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) {
+  .action {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* desktop size */
+@media screen and (min-width: 1024px) {
+  .action {
+    padding: 0.5rem 0.8rem;
+  }
+}

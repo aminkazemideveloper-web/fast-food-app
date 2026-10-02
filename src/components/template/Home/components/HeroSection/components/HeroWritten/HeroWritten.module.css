@@ -1,0 +1,69 @@
+.written {
+  display: grid;
+
+  gap: 1.5rem;
+
+  max-inline-size: 40rem;
+
+  justify-items: center;
+
+  text-align: center;
+  z-index: 2;
+
+  .vituals {
+    display: grid;
+    gap: 1.5rem;
+
+    > h1 {
+      margin: 0;
+
+      font-size: var(--font-size-800);
+      text-wrap: nowrap;
+      line-height: 2;
+
+      font-weight: 900;
+
+      letter-spacing: -0.03em;
+
+      color: var(--color-text);
+      > span {
+        display: inline-block;
+
+        color: var(--color-primary);
+
+        text-shadow: 0 0 25px
+          color-mix(in srgb, var(--color-primary) 20%, transparent);
+      }
+    }
+
+    > p {
+      margin: 0;
+
+      color: var(--color-text--sub);
+
+      font-size: var(--font-size-400);
+
+      line-height: 1.7;
+
+      font-weight: 400;
+    }
+  }
+}
+
+
+
+/* -------------------- */
+/* Desktop */
+/* -------------------- */
+
+@media screen and (min-width: 1024px) {
+  .written {
+    justify-items: start;
+
+    text-align: start;
+
+    gap: 1.7rem;
+  }
+}
+
+

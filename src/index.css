@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: var(--color-surface--1);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+text,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  inline-size: min(75rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.card {
+  box-shadow: var(--shadow-normal);
+  border-radius: 0.4rem;
+  corner-shape: roune;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: var(--shadow-heavy);
+  }
+}

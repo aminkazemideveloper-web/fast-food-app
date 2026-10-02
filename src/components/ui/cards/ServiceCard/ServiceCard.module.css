@@ -1,0 +1,38 @@
+.service {
+  display: grid;
+  gap: 0.2rem;
+  place-items: center;
+  border-radius: 1rem;
+  background-color: var(--color-gray-dark);
+
+  padding: 1rem;
+  block-size: 10rem;
+  inline-size: 10rem;
+  aspect-ratio: 1/1;
+  transition: background-color 0.3s ease-in;
+  &:hover {
+    background-color: var(--color-gray-hover);
+
+    .img-box {
+      transform: scale(1.1);
+    }
+  }
+
+  .img-box {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .title {
+    text-align: center;
+    color: var(--color-primary-contrast);
+    font-size: var(--font-size-300);
+  }
+
+  :global(html[data-theme="light"]) & {
+    background-color: var(--color-gray-hover);
+
+    &:hover {
+      background-color: var(--color-gray-dark);
+    }
+  }
+}

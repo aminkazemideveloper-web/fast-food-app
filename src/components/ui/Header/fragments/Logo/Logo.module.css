@@ -1,0 +1,64 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  flex-shrink: 0;
+  justify-content: center;
+  .text {
+    color: var(--color-primary-contrast);
+    font-size: var(--font-size-600);
+    font-weight: 600;
+    /* text-shadow: 0 2px var(--color-text); */
+  }
+
+  .img-box {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    border-radius: 999rem;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    .img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) {
+  .logo {
+    .img-box {
+      inline-size: 2rem;
+      block-size: 2rem;
+    }
+  }
+}
+
+/* desktop size */
+@media screen and (min-width: 1024px) {
+  .logo {
+    .img-box {
+      inline-size: 2.5rem;
+      block-size: 2.5rem;
+      animation: wave 2s infinite;
+    }
+  }
+}
+
+@keyframes wave {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(1px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-1px);
+    opacity: 0.5;
+  }
+}

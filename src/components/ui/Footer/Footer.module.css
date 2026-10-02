@@ -1,0 +1,28 @@
+.footer {
+  margin-block-start: 5rem;
+  color: var(--color-primary-contrast);
+  font-size: var(--font-size-200);
+  padding: 0.5rem;
+  background-color: var(--color-gray-dark);
+
+  .wrapper {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    > .golbarg {
+      text-align: end;
+      > span {
+        padding-inline: 1ch;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: column;
+  }
+}

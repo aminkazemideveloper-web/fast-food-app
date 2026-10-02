@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* -------------------- */
+/* Background glow */
+/* -------------------- */
+
+.glow {
+  position: absolute;
+
+  inline-size: 25rem;
+  block-size: 25rem;
+
+  inset-inline-start: -4rem;
+  inset-block-start: 5rem;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  opacity: 0.08;
+
+  filter: blur(100px);
+
+  z-index: -2;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  min-block-size: 34rem;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  inline-size: 18rem;
+  block-size: 18rem;
+
+  inset-inline-start: -8rem;
+  inset-block-end: -5rem;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  opacity: 0.05;
+
+  filter: blur(90px);
+
+  z-index: -2;
+}
+/* -------------------- */
+/* Tablet */
+/* -------------------- */
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    min-block-size: 38rem;
+
+    padding-inline: 3rem;
+  }
+}
+
+/* -------------------- */
+/* Desktop */
+/* -------------------- */
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 0.9fr 1.1fr;
+
+    min-block-size: 42rem;
+
+    padding-inline: 4rem;
+
+    text-align: start;
+  }
+}
+
+/* -------------------- */
+/* Large desktop */
+/* -------------------- */
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    padding-inline: 7rem;
+  }
+}
+
+/* -------------------- */
+/* Mobile */
+/* -------------------- */
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding-block: 2rem;
+  }
+}

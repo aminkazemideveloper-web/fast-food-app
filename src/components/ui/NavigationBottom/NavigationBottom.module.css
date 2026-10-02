@@ -1,0 +1,92 @@
+.navigation {
+  position: fixed;
+  bottom: 7%;
+
+  inline-size: min(22rem, calc(100% - 1rem));
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  margin-inline: auto;
+  background-color: var(--color-backdrup);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  margin-block-start: 1rem;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-inline: 2rem;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scroll-snap-align: top;
+    scrollbar-color: var(--color-gray-hover) var(--color-gray-dark);
+    inline-size: 100%;
+
+    font-size: var(--font-size-400);
+    > .item {
+      > .link {
+        font-size: 0.7em;
+        display: grid;
+        justify-items: center;
+        color: var(--color-primary-contrast);
+        gap: 1ch;
+        flex-wrap: nowrap;
+        padding: 0.5rem;
+        .label {
+          transition: all 0.3s ease;
+          text-wrap: nowrap;
+          opacity: 0;
+          visibility: hidden;
+        }
+        .icon {
+          font-size: 2em;
+          transform: translateY(20px);
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          .icon {
+            font-size: 2.5em;
+            color: var(--color-primary-hover);
+            transform: translateY(10px);
+          }
+
+          .label {
+            opacity: 0.5;
+            visibility: visible;
+            color: var(--color-primary-hover);
+          }
+        }
+        &.active {
+          .label {
+            color: var(--color-primary);
+            opacity: 1;
+            visibility: visible;
+            font-weight: 600;
+            filter: drop-shadow(0px 5px 15px var(--color-primary));
+          }
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border-radius: 999rem;
+            aspect-ratio: 1/1;
+            background-color: var(--color-primary);
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}

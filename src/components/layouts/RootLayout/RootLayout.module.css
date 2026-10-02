@@ -1,0 +1,15 @@
+.layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  .main {
+    margin-block-start: 10rem;
+    padding-block-start: 1rem;
+    padding-inline: 1rem;
+  }
+}

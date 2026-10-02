@@ -1,0 +1,16 @@
+.snipper {
+  inline-size: 0.8rem;
+  block-size: 0.8rem;
+  border: 2px solid
+    color-mix(in srgb, var(--color-primary-contrast) 25%, transparent);
+  border-block-start-color: var(--color-primary-contrast);
+  border-radius: 50%;
+
+  animation: button-loading 0.7s linear infinite;
+}
+
+@keyframes button-loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
