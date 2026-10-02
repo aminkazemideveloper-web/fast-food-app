@@ -5,34 +5,18 @@ import Navbar from "./fragments/Navbar/Navbar";
 import styles from "./Header.module.css";
 import IconButton from "../../shared/IconButton/IconButton";
 import MingcuteAlignJustifyLine from "../../../icons/MingcuteAlignJustifyLine";
-import HeaderProvider from "../../../providers/HeaderProvider";
-import { use } from "react";
-import { HeaderContext } from "../../../context/HeaderContext";
 import MingcuteCloseLine from "../../../icons/MingcuteCloseLine";
 import MobileNavbar from "./fragments/MobileNavbar/MobileNavbar";
-
 import { useGetAllCategories } from "../../../services/hooks/category/useGetAllCategories";
-import type { CategoryType } from "../../../types/category-type";
 import useScrollAnimation from "../../../hooks/useScrollAnimation";
+import { useSidebareStore } from "../../../stores/sidebar-store";
 
 function Header() {
   const { data: categories } = useGetAllCategories();
-  return (
-    <HeaderProvider>
-      <HeaderComponents categories={categories!} />
-    </HeaderProvider>
-  );
-}
-
-export default Header;
-type Props = {
-  categories: CategoryType[];
-};
-
-function HeaderComponents({ categories }: Props) {
   const containerRef = useScrollAnimation();
 
-  const { toggleOpen, isOpen } = use(HeaderContext);
+  const isOpen = useSidebareStore((state) => state.isOpen);
+  const toggleOpen = useSidebareStore((state) => state.toggleOpen);
 
   return (
     <header ref={containerRef} className={clsx(styles.header, "container")}>
@@ -58,3 +42,5 @@ function HeaderComponents({ categories }: Props) {
     </header>
   );
 }
+
+export default Header;

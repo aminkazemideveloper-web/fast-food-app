@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import styles from "./MobileNavbar.module.css";
-import { use } from "react";
-import { HeaderContext } from "../../../../../context/HeaderContext";
+
 import IconButton from "../../../../shared/IconButton/IconButton";
 import MingcuteArrowLeftFill from "../../../../../icons/MingcuteArrowLeftFill";
 import Logo from "../Logo/Logo";
@@ -13,13 +12,17 @@ import MingcuteNewdotLine from "../../../../../icons/MingcuteNewdotLine";
 import MingcuteCalendarTimeAddLine from "../../../../../icons/MingcuteCalendarTimeAddLine";
 import MingcuteUserQuestionFill from "../../../../../icons/MingcuteUserQuestionFill";
 import MingcutePencil3AiLine from "../../../../../icons/MingcutePencil3AiLine";
+import { useSidebareStore } from "../../../../../stores/sidebar-store";
 
 type Props = {
   categories: CategoryType[];
 };
 
 function MobileNavbar({ categories }: Props) {
-  const { isCollapse, toggleCollaps, isOpen } = use(HeaderContext);
+  const isCollapse = useSidebareStore((state) => state.isCollaps);
+  const isOpen = useSidebareStore((state) => state.isOpen);
+  const toggleCollaps = useSidebareStore((state) => state.toggleSidebar);
+
   const iconMap = {
     MingcuteHome3Line,
     MingcuteChartBarLine,
