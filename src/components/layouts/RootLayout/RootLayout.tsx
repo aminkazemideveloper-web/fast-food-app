@@ -7,6 +7,7 @@ import clsx from "clsx";
 import useScrollAnimation from "../../../hooks/useScrollAnimation";
 import NavigationBottom from "../../ui/NavigationBottom/NavigationBottom";
 import Navbar from "../../ui/Header/fragments/Navbar/Navbar";
+import ScrollToTop from "../../ui/ScrollToTop/ScrollToTop";
 
 function RootLayout() {
   const containerRef = useScrollAnimation();
@@ -21,6 +22,7 @@ function RootLayout() {
       </div>
 
       <NavigationBottom />
+      <ScrollToTop />
       <Footer />
     </div>
   );

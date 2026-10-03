@@ -1,0 +1,44 @@
+.scroll {
+  inline-size: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 999rem;
+
+  display: grid;
+  place-items: center;
+
+  position: fixed;
+
+  bottom: 10%;
+  right: 4%;
+  transition: all 0.3s;
+
+  border: 1px solid var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+
+  > svg {
+    font-size: var(--font-size-400);
+    font-weight: 400;
+    rotate: 90deg;
+    animation: shake 0.8s infinite linear;
+  }
+
+  &:hover {
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.28),
+      0 0 30px color-mix(in srgb, var(--color-primary) 30%, transparent),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2),
+      inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+}

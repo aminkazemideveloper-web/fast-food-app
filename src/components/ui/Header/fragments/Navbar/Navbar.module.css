@@ -80,8 +80,8 @@
       color-mix(in srgb, var(--color-backdrup) 80%, transparent)
     );
 
-    border: 1px solid
-      color-mix(in srgb, var(--color-primary-contrast) 12%, transparent);
+    border: 2px solid
+      color-mix(in srgb, var(--color-primary-contrast) 6%, transparent);
 
     box-shadow:
       0 20px 50px rgba(0, 0, 0, 0.28),
@@ -94,8 +94,8 @@
     padding-inline: 2rem;
 
     &:hover {
-      border: 1px solid
-        color-mix(in srgb, var(--color-primary) 52%, transparent);
+      border: 2px solid
+        color-mix(in srgb, var(--color-primary) 22%, transparent);
 
       background: linear-gradient(
         to left,

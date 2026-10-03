@@ -33,48 +33,52 @@ function MobileNavbar({ categories }: Props) {
     MingcutePencil3AiLine,
   };
   return (
-    <nav
-      className={clsx(
-        styles["mobile-navbar"],
-        isCollapse && styles.collapse,
-        isOpen === "open" && styles["navbar-open"],
+    <>
+      {isOpen && (
+        <nav
+          className={clsx(
+            styles["mobile-navbar"],
+            isCollapse && styles.collapse,
+            isOpen === "open" && styles["navbar-open"],
+          )}
+        >
+          <div className={styles.topbar}>
+            <IconButton className={styles.btn} onClick={toggleCollaps}>
+              <MingcuteArrowLeftFill />
+            </IconButton>
+            <Logo />
+          </div>
+          <ul className={styles.list}>
+            {categories?.map((item) => {
+              const Icon = iconMap[item.icon];
+
+              return (
+                <li key={item.id} className={styles.item}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      clsx(styles.link, isActive && styles.active)
+                    }
+                    key={item.id}
+                    to={item.link}
+                  >
+                    <span className={styles.label}>
+                      {isCollapse ? (
+                        item.label
+                      ) : (
+                        <span>{item.label.slice(0, 8)}...</span>
+                      )}
+                    </span>
+                    <span className={styles.icon}>{Icon && <Icon />}</span>
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+
+          <ThemeSwitch />
+        </nav>
       )}
-    >
-      <div className={styles.topbar}>
-        <IconButton className={styles.btn} onClick={toggleCollaps}>
-          <MingcuteArrowLeftFill />
-        </IconButton>
-        <Logo />
-      </div>
-      <ul className={styles.list}>
-        {categories?.map((item) => {
-          const Icon = iconMap[item.icon];
-
-          return (
-            <li key={item.id} className={styles.item}>
-              <NavLink
-                className={({ isActive }) =>
-                  clsx(styles.link, isActive && styles.active)
-                }
-                key={item.id}
-                to={item.link}
-              >
-                <span className={styles.label}>
-                  {isCollapse ? (
-                    item.label
-                  ) : (
-                    <span>{item.label.slice(0, 8)}...</span>
-                  )}
-                </span>
-                <span className={styles.icon}>{Icon && <Icon />}</span>
-              </NavLink>
-            </li>
-          );
-        })}
-      </ul>
-
-      <ThemeSwitch />
-    </nav>
+    </>
   );
 }
 

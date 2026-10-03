@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0.5rem 0.2rem;
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
