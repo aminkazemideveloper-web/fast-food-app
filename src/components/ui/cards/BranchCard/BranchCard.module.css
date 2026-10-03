@@ -1,0 +1,6 @@
+.branch-card {
+  inline-size: 14rem;
+  block-size: 14rem;
+  display: grid;
+  justify-items: center;
+}

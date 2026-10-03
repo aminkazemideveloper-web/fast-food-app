@@ -1,0 +1,11 @@
+.branches {
+  display: grid;
+  gap: 5rem;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

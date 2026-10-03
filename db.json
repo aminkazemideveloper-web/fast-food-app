@@ -382,5 +382,525 @@
       "rating": 4.6,
       "stock": 35
     }
+  ],
+  "branches": [
+    {
+      "branchId": "298493",
+      "tell": " 02144025274",
+      "region": " اباذر",
+      "address": " صادقیه، بلوار آیت الله کاشانی، بلوار اباذر، نبش خیابان بوستان سوم، مجتمع آیسان، پلاک 19",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1522/%D8%A7%D8%A8%D8%A7%D8%B0%D8"
+    },
+    {
+      "branchId": "298463",
+      "tell": " 02126610471",
+      "region": " اختیاریه",
+      "address": " خیابان پاسداران، خیابان اختیاریه جنوبی، نرسیده به خیابان دولت، نبش بن بست درویش، پلاک 51",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1507/%D8%A7%D8%AE%D8%AA%DB%8C%D8%A7%D8%B1%DB%8C%D9%87%20(5).jpg"
+    },
+    {
+      "branchId": "298491",
+      "tell": " 02166047606",
+      "region": " استاد معین",
+      "address": " خیابان استاد معین، نبش کوچه صاحب الزمان، پلاک 137",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1521/%D9%85%D8%B9%DB%8C%D9%86%20(3).jpg"
+    },
+    {
+      "branchId": "298338",
+      "tell": " 02144672039",
+      "region": " اکباتان آپادانا",
+      "address": " اکباتان، فاز 3، خیابان نفیسی، پاساژ نگین، جنب بانک ملت، پلاک 12",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1556/%D8%A7%DA%A9%D8%A8%D8%A7%D8%AA%D8%A7%D9%86%20%D8%A2%D9%BE%D8%A7%D8%AF%D8%A7%D9%861.jpg"
+    },
+    {
+      "branchId": "298340",
+      "tell": " 02144635232",
+      "region": " اکباتان مگامال",
+      "address": " شهرک اکباتان مجتمع مگامال طبقه دوم فودکورت",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283447/ekbatan_phase2.jpg"
+    },
+    {
+      "branchId": "298330",
+      "tell": " 02144928958",
+      "region": " امیرکبیر",
+      "address": " شهرک راه آهن، بلوار امیرکبیر، نرسیده به خیابان گل آذین، روبروی مجتمع شقایق، پلاک 726",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283442/amirkabir.jpg"
+    },
+    {
+      "branchId": "298475",
+      "tell": " 02126657112",
+      "region": " اندرزگو",
+      "address": " بلوار اندرزگو، خیابان سلیمانی غربی، نبش لادن، پلاک 84",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1513/%D8%A7%D9%86%D8%AF%D8%B1%D8%B2%DA%AF%D9%88.jpg"
+    },
+    {
+      "branchId": "298513",
+      "tell": " 02196862371",
+      "region": " اندیشه کرج",
+      "address": " اندیشه، فاز 3، خیابان استقلال، بلوار آزادی، مرکز خرید آتریوم مال، طبقه همکف",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1531/%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA%DB%8C.jpg"
+    },
+    {
+      "branchId": "298467",
+      "tell": " 02166418462",
+      "region": " انقلاب",
+      "address": " میدان انقلاب، ضلع جنوبی شرقی، پلاک 16",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1509/%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8-5.jpg"
+    },
+    {
+      "branchId": "298344",
+      "tell": " 02147673702",
+      "region": " ایران مال",
+      "address": " ایران مال، طبقه G3، فودکورت سپید، واحد RD240",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283449/iranmall.jpg"
+    },
+    {
+      "branchId": "298308",
+      "tell": " 02166059828",
+      "region": " آذربایجان - بهبودی",
+      "address": " خیابان آزادی، روبروی خیابان بهبودی، ابتدای خیابان آذربایجان، پلاک 1044",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283424/927b42053b_azadi_azarbayjan-2025-02-15-12-50-52.jpg"
+    },
+    {
+      "branchId": "298334",
+      "tell": " 02144167152",
+      "region": " باکری - فردوس",
+      "address": " هایپراستار باکری",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283444/bakeri.jpg"
+    },
+    {
+      "branchId": "298581",
+      "tell": " 02156071953",
+      "region": " بریانک",
+      "address": " تهران، میدان بریانک، خیابان بریانک غربی، نبش کوچه خورشیدی، پلاک 1",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/32848/%D8%B4%DB%8C%D9%84%D8%A7-%D8%A8%D8%B1%DB%8C%D8%A7%D9%86%DA%A9.jpg"
+    },
+    {
+      "branchId": "298332",
+      "tell": " 02122477281",
+      "region": " بلوار ارتش",
+      "address": " بلوار ارتش شرق به غرب، بعد از مجتمع شمیران سنتر، نرسیده به نخل ، پلاک 3",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283443/artesh.jpg"
+    },
+    {
+      "branchId": "298505",
+      "tell": " 02188074857",
+      "region": " بلوار دریا - سعادت آباد",
+      "address": " سعادت آباد، بلوار دریا، پلاک 46",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1528/%D8%B3%D8%B9%D8%A7%D8%AF%D8%AA%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A8%D9%84%D9%88%D8%A7%D8%B1%20%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D81).jpg"
+    },
+    {
+      "branchId": "298318",
+      "tell": " 02126230268",
+      "region": " پارک ملت",
+      "address": " خیابان ولیعصر، روبروی پارک ملت، نبش کوچه آرامش، پلاک 4",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283429/mellat.jpg"
+    },
+    {
+      "branchId": "298354",
+      "tell": " 02146139861",
+      "region": " پونک - میرزابابایی",
+      "address": " پونک، بلوار میرزابابایی، نرسیده به سردار جنگل، نبش گلها، پلاک 134",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283454/pounak.jpg"
+    },
+    {
+      "branchId": "298324",
+      "tell": " 02177755183",
+      "region": " پیروزی",
+      "address": " خیابان پیروزی، ابتدای خیابان اول نیروهوایی، پلاک 3/1",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1553/%D9%BE%DB%8C%D8%B1%D9%88%D8%B21.jpg"
+    },
+    {
+      "branchId": "298483",
+      "tell": " 02122705307",
+      "region": " تجریش",
+      "address": " تجریش، ضلع شمال شرقی میدان تجریش، پلاک 115",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1517/%D8%AA%D8%AC%D8%B1%DB%8C%D8%B4%20(2).jpg"
+    },
+    {
+      "branchId": "298362",
+      "tell": " 02177931027",
+      "region": " تلفنخانه",
+      "address": " خیابان شهید ثانی، نرسیده به چهارراه تلفنخانه، پلاک 334",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283459/telephonkhaneh.jpg"
+    },
+    {
+      "branchId": "298479",
+      "tell": " 02177702925",
+      "region": " تهرانپارس (فلکه اول)",
+      "address": " بالاتر از فلکه اول تهرانپارس، نبش خیابان 152 شرقی",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1515/%D8%AA%D9%87%D8%B1%D8%A7%D9%86%E2%80%8C%D9%BE%D8%A7%D8%B1%D8%B3%20(2).jpg"
+    },
+    {
+      "branchId": "298481",
+      "tell": " 02177388412",
+      "region": " تهرانپارس (فلکه سوم)",
+      "address": " بین فلکه سوم و چهارم تهرانپارس، خیابان حجر بن عدی، بین خیابان 214 و 216 غربی، پلاک 394",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1516/%D8%AA%D9%87%D8%B1%D8%A7%D9%86%E2%80%8C%D9%BE%D8%A7%D8%B1%D8%B3%20%D9%81%D9%84%DA%A9%D9%87%20%D8%B3%D9%88%D9%85%20(2).jpg"
+    },
+    {
+      "branchId": "298360",
+      "tell": " 02144545628",
+      "region": " تهرانسر",
+      "address": " تهرانسر، بلوار لاله، ازشرق به غرب نرسیده به خیابان قباد شمالی، پلاک 125.3",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283457/tehransar.jpg"
+    },
+    {
+      "branchId": "298346",
+      "tell": " 02146018482",
+      "region": " جنت آباد",
+      "address": " جنت آباد جنوبی، بلوار لاله شرقی، پلاک 29",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283450/jannatabad.jpg"
+    },
+    {
+      "branchId": "298328",
+      "tell": " 02634426014",
+      "region": " جهانشهر کرج",
+      "address": " جهانشهر، بلوار ماهان، میدان مدنی، ضلع شمالی میدان، پلاک 44",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283441/9f522bf6ad_karaj_jahanshir-2025-02-15-12-58-42.jpg"
+    },
+    {
+      "branchId": "298336",
+      "tell": " 02144814785",
+      "region": " چهار دیواری",
+      "address": " انتهای اشرفی اصفهانی، بلوار سیمون بولیوار، خیابان معین، نبش کوچه معین اول پلاک 21",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283445/chahardivari.jpg"
+    },
+    {
+      "branchId": "298296",
+      "tell": " 02196862323",
+      "region": " چهارراه ولیعصر",
+      "address": " خیابان انقلاب، بعد از چهارراه ولیعصر، ضلع شمال غربی",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283416/chaharrah_valiasr.jpg"
+    },
+    {
+      "branchId": "298342",
+      "tell": " 02177317449",
+      "region": " حکیمیه",
+      "address": " حکیمیه، بلوار عبدالرضا (بهار)، پلاک 217",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1554/%D8%AD%DA%A9%DB%8C%D9%85%DB%8C%D9%87%20(2).jpg"
+    },
+    {
+      "branchId": "298352",
+      "tell": " 02144929531",
+      "region": " دهکده المپیک",
+      "address": " میدان المپیک، بلوار دهکده المپیک، نبش کوچه 23، پلاک 2.1",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283453/olympic.jpg"
+    },
+    {
+      "branchId": "298310",
+      "tell": " 02196862351",
+      "region": " دولت",
+      "address": " خیابان دکتر شریعتی، خیابان شهید کلاهدوز (دولت)، بین کوچه نامدار و معتقد، پلاک 457",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283425/dolat.jpg"
+    },
+    {
+      "branchId": "298274",
+      "tell": " 02188642401",
+      "region": " ساعی",
+      "address": " خیابان ولیعصر، بالاتر از پارک ساعی، پلاک 2185",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283375/saei.jpg"
+    },
+    {
+      "branchId": "298302",
+      "tell": " 02177849386",
+      "region": " سبلان",
+      "address": " خیابان مدنی شمالی، روبروی کوچه ابراهیمی (روبروی پاساژ امیر)، پلاک 910و 912",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283419/sabalan.jpg"
+    },
+    {
+      "branchId": "298469",
+      "tell": " 02166421374",
+      "region": " ستارخان",
+      "address": " ستارخان، بین کوچه خلخال و کاج، پلاک 79",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1510/%D8%B3%D8%AA%D8%A7%D8%B1%D8%AE%D8%A7%D9%86%20(7).jpg"
+    },
+    {
+      "branchId": "298511",
+      "tell": " 02634005172",
+      "region": " سرداران کرج",
+      "address": " کرج، کوی کارمندان جنوبی، میدان ولفجر، بلوار سرداران، نبش کوچه یکتا",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1532/%D8%B4%D8%A7%D9%87%DB%8C%D9%86-2.jpg"
+    },
+    {
+      "branchId": "298473",
+      "tell": " 02126617539",
+      "region": " سعادت آباد",
+      "address": " تهران، سعادت‌آباد، تقاطع خیابان اوین و بلوار بهزادی، ابتدای بهزادی، پلاک 8",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1512/%D8%B3%D8%B9%D8%A7%D8%AF%D8%AA%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF(%DA%A9%D9%88%DB%8C%20%D9%81%D8%B1%D8%A7%D8%B2)%20(10).jpg"
+    },
+    {
+      "branchId": "298304",
+      "tell": " 02136483885",
+      "region": " سعدی",
+      "address": " چهارراه مخبرالدوله، خیابان جمهوری به سمت بهارستان، جنب متروی سعدی(ضلع شمال شرقی) پلاک 209",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283420/sadi.jpg"
+    },
+    {
+      "branchId": "298266",
+      "tell": " 02177526819",
+      "region": " سمیه",
+      "address": " خیابان شریعتی ، بین 3 راه طالقانی و چهارراه سمیه، جنب بانک کشاورزی، پلاک 142، طبقه همکف",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1555/%D8%B3%D9%85%DB%8C%D9%87.jpg"
+    },
+    {
+      "branchId": "298268",
+      "tell": " 02188735800",
+      "region": " سهروردی شمالی",
+      "address": " سهروردی شمالی، خیابان خرمشهر (آپادانا)، خیابان عشقیار، ضلع جنوب غربی میدان نیلوفر، پلاک 60",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283372/sohrevardi_shomali.jpg"
+    },
+    {
+      "branchId": "298270",
+      "tell": " 02126700293",
+      "region": " سید خندان",
+      "address": " خیابان شریعتی، زیر پل سیدخندان، ضلع شمال غربی، پلاک 920",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283373/seyedkhandan.jpg"
+    },
+    {
+      "branchId": "298356",
+      "tell": " 02146016533",
+      "region": " شاهین - جنت آباد مرکزی",
+      "address": " جنت آباد مرکزی، خیابان مخبری نرسیده به تقاطع شاهین پلاک 8/5",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283455/shahin.jpg"
+    },
+    {
+      "branchId": "298457",
+      "tell": " 02126406820",
+      "region": " شریعتی",
+      "address": " خیابان شریعتی، روبروی حسینیه ارشاد، جنب بانک ملی، پلاک 1124",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1503/%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA"
+    },
+    {
+      "branchId": "298461",
+      "tell": " 02136919720",
+      "region": " شکوفه",
+      "address": " ابتدای خیابان پیروزی غرب به شرق، بعد از سه راه شکوفه، کنارگذر پیروزی نرسیده به اتوبان امام علی، بین رستمی و مسلسل، پلاک 964",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1506/%D8%B4%DA%A9%D9%88%D9%81%D9%87-4.jpg"
+    },
+    {
+      "branchId": "298316",
+      "tell": " 02122535976",
+      "region": " شمس آباد",
+      "address": " استاد حسن بنا، پایین تر از میدان ملت، نبش کوچه اردستانی (نور)، پلاک 705",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283428/majidieh_shomali.jpg"
+    },
+    {
+      "branchId": "298499",
+      "tell": " 02136652417",
+      "region": " شهر ری",
+      "address": " شهر ری، بلوار دیلمان (امام حسین)، پلاک 187",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1525/%D8%B4%D9%87%D8%B1%20%D8%B1%DB%8C%20(6%20of%208).jpg"
+    },
+    {
+      "branchId": "298358",
+      "tell": " 02144315814",
+      "region": " شهران",
+      "address": " شهران شمالی، بلوار شهرداری، (فلکه دوم شهران)، پلاک 104",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283456/shahran.jpg"
+    },
+    {
+      "branchId": "298485",
+      "tell": " 02122070375",
+      "region": " شهرک غرب",
+      "address": " شهرک غرب، بلوار فرحزادی، بالاتر از بلوار دریا، نبش ساختمان صدف، پلاک 2",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1518/%D8%B4%D9%87%D8%B1%DA%A9%20%D8%BA%D8%B1%D8%A8-2.jpg"
+    },
+    {
+      "branchId": "298326",
+      "tell": " 02188049128",
+      "region": " شیراز شمالی",
+      "address": " خیابان شیراز شمالی، میدان شیراز، نبش خیابان دانشور شرقی پلاک 218",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283434/shirazshomali.jpg"
+    },
+    {
+      "branchId": "298487",
+      "tell": " 02144374726",
+      "region": " صادقیه",
+      "address": " تهران، فلکه اول صادقیه، ، پلاک 1084",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1519/%D8%B5%D8%A7%D8%AF%D9%82%DB%8C%D9%87-4.jpg"
+    },
+    {
+      "branchId": "298579",
+      "tell": " 02126423619",
+      "region": " ظفر",
+      "address": " تهران، خیابان شریعتی، خیابان وحید دستگردی (ظفر)، خیابان تخارستان، پلاک 20",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/32710/%D8%A7%D8%B1%D8%AA%D8%B4%20(5).jpg"
+    },
+    {
+      "branchId": "298262",
+      "tell": " 02188729504",
+      "region": " عباس آباد",
+      "address": " خیابان بهشتی (عباس‌آباد)، بین میرزای شیرازی و قائم مقام، روبه روی سینما آزادی، جنب بانک پارسیان پلاک 446",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283369/abbasabad.jpg"
+    },
+    {
+      "branchId": "298555",
+      "tell": " 02155889772",
+      "region": " عبدل آباد",
+      "address": " تهران، بلوار شکوفه، بین خیابان بدر و زنهاری، پلاک 168",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/21924/%D8%AF%D9%88%D9%84%D8%AA-5.jpg"
+    },
+    {
+      "branchId": "298509",
+      "tell": " 09426052601",
+      "region": " عظیمیه کرج",
+      "address": " کرج، عظیمیه، بلوار شریعتی، ضلع جنوب شرقی میدان مهران",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1530/%D8%B3%DB%8C%D8%AF%D8%AE%D9%86%D8%AF%D8%A7%D9%86-2.jpg"
+    },
+    {
+      "branchId": "298298",
+      "tell": " 02188997527",
+      "region": " فاطمی - حجاب",
+      "address": " خیابان فاطمی، خیابان حجاب، جنب سالن ورزشی حجاب، روبروی خانه والیبال، پلاک 17",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283417/hejab.jpg"
+    },
+    {
+      "branchId": "298501",
+      "tell": " 09426002914",
+      "region": " فردیس کرج",
+      "address": " فردیس ، فلکه دوم ، ضلع جنوب شرقی فلکه",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1526/%D9%81%D8%B1%D8%AF%DB%8C%D8%B3%20%DA%A9%D8%B1%D8%AC%20(4%20of%209).jpg"
+    },
+    {
+      "branchId": "298312",
+      "tell": " 02166834632",
+      "region": " قصرالدشت",
+      "address": " خیابان امام خمینی، بعد از تقاطع خیابان قصرالدشت، پلاک 918",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283426/ghasredasht.jpg"
+    },
+    {
+      "branchId": "298348",
+      "tell": " 02144971646",
+      "region": " کوروش",
+      "address": " اتوبان ستاری، مجتمع تجاری کوروش، طبقه 7، واحد 8",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283451/korosh.jpg"
+    },
+    {
+      "branchId": "298583",
+      "tell": " 02126617539",
+      "region": " کوی فراز",
+      "address": " تهران، سعادت‌آباد، تقاطع خیابان اوین و بلوار بهزادی، ابتدای بهزادی، پلاک 8",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/32854/%D8%B4%DB%8C%D9%84%D8%A7%20%DA%A9%D9%88%DB%8C%20%D9%81%D8%B1%D8%A7%D8%B2.jpg"
+    },
+    {
+      "branchId": "298503",
+      "tell": " 02634239305",
+      "region": " گوهردشت کرج",
+      "address": " رج، گوهردشت، فاز یک، بلوار شهید مطهری، روبروی نیکامال، پلاک 11",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1527/-7%DA%A9%D8%B1%D8%AC%20%DA%AF%D9%88%D9%87%D8%B1%D8%AF%D8%B4%D8%AA.jpg"
+    },
+    {
+      "branchId": "298465",
+      "tell": " 02188255296",
+      "region": " گیشا",
+      "address": " گیشا، خیابان ناظریان قمی، بین خیابان پانزدهم و هفدهم، روبروی هنرستان نیایش، پلاک 27",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1508/%DA%AF%DB%8C%D8%B4%D8%A7-7.jpg"
+    },
+    {
+      "branchId": "298300",
+      "tell": " 02188410579",
+      "region": " مجیدیه",
+      "address": " جانبازان غربی، مابین 16متری اول و دوم، پلاک 376",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283418/majidieh.jpg"
+    },
+    {
+      "branchId": "298264",
+      "tell": " 02188714047",
+      "region": " مطهری",
+      "address": " خیابان ولی عصر، روبروی مطهری، نبش فتحی شقاقی، زیر برج بلورین",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283370/motahari.jpg"
+    },
+    {
+      "branchId": "298320",
+      "tell": " 02155372130",
+      "region": " منیریه",
+      "address": " خیابان ولیعصر، نرسیده به میدان منیریه، نبش کوچه ی اخباری، پلاک 781",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283431/monirieh.jpg"
+    },
+    {
+      "branchId": "298272",
+      "tell": " 02188945452",
+      "region": " میدان ولیعصر",
+      "address": " ضلع جنوب شرقی میدان ولیعصر ، نبش کوچه شقایق ، پلاک 46",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283374/meydan_valiasr.jpg"
+    },
+    {
+      "branchId": "298322",
+      "tell": " 02177495961",
+      "region": " نارمک",
+      "address": " نارمک، میدان نبوت، خیابان جانبازان شرقی، پلاک 399",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283432/narmak.jpg"
+    },
+    {
+      "branchId": "298495",
+      "tell": " 02155326786",
+      "region": " نازی آباد",
+      "address": " تهران، خیابان بازار دوم نازی آباد ( احمد بابایی )، پلاک 226، جنب بانک مسکن",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1523/%D9%86%D8%A7%D8%B2%DB%8C%20%D8%A2%D8%A8%D8%A7%D8%AF-6.jpg"
+    },
+    {
+      "branchId": "298489",
+      "tell": " 02133652358",
+      "region": " نبرد",
+      "address": " افسریه، بلوار ده حقی شرق به غرب، نرسیده به نبرد، پلاک 147",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1520/%D9%86%D8%A8%D8%B1%D8%AF-4.jpg"
+    },
+    {
+      "branchId": "298507",
+      "tell": " 02126378312",
+      "region": " نیاوران",
+      "address": " خیابان نیاوران، خیابان جماران، مجتمع تجاری جم سنتر، فودکورت مجتمع، طبقه 2",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1529/%D9%86%DB%8C%D8%A7%D9%88%D8%B1%D8%A7%D91).jpg"
+    },
+    {
+      "branchId": "298477",
+      "tell": " 02122051176",
+      "region": " ولنجک (الف)",
+      "address": " ولنجک، خیابان مقدس اردبیلی غرب به شرق، نرسیده به میدان الف، پلاک 130",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1514/%D9%88%D9%84%D9%86%D8%AC%DA%A9%20(2).jpg"
+    },
+    {
+      "branchId": "298459",
+      "tell": " 02188653362",
+      "region": " ونک",
+      "address": " ضلع جنوب شرقی میدان ونک",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1505/%D9%88%D9%86%DA%A9-3.jpg"
+    },
+    {
+      "branchId": "298314",
+      "tell": " 02126751303",
+      "region": " هروی",
+      "address": " میدان هروی، خیابان موسوی، نبش کوچه نازک، مرکز خرید هروی سنتر",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283427/heravi.jpg"
+    },
+    {
+      "branchId": "298260",
+      "tell": " 02188862491",
+      "region": " هفت تیر",
+      "address": " میدان هفت تیر، ابتدای مفتح شمالی، روبروی سینما پایتخت، نبش کوچه پارس، پلاک 218",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283368/hafttir.jpg"
+    },
+    {
+      "branchId": "298471",
+      "tell": " 02136839176",
+      "region": " هفده شهریور",
+      "address": " تهران، بزرگراه محلاتی، خیابان هفده شهریور، زیر پل آهنگ، پلاک 990",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1511/%D9%87%D9%81%D8%AF%D9%87%D9%85%20%D8%B4%D9%87%D8%B1%DB%8C%D9%88%D8%B1%20(4%20of%207).jpg"
+    },
+    {
+      "branchId": "298497",
+      "tell": " 02166242381",
+      "region": " یافت آباد",
+      "address": " اتوبان آیت‌الله سعیدی، نرسیده به چهارراه یافت‌آباد، پلاک 581",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/1524/%DB%8C%D8%A7%D9%81%D8%AA%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF%20(2%20of%206).jpg"
+    },
+    {
+      "branchId": "298306",
+      "tell": " 02188618086",
+      "region": " یوسف آباد",
+      "address": " یوسف آباد، نرسیده به میدان کلانتری، پلاک 313",
+      "img": "https://shilafood.co/Content/images/4418/shortcutTab/283421/yosefabad.jpg"
+    }
   ]
 }
