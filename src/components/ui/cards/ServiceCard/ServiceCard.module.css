@@ -3,15 +3,24 @@
   gap: 0.2rem;
   place-items: center;
   border-radius: 1rem;
-  background-color: var(--color-gray-dark);
+  background-color: var(--color-background);
 
   padding: 1rem;
   block-size: 10rem;
   inline-size: 10rem;
   aspect-ratio: 1/1;
+
   transition: background-color 0.3s ease-in;
+
   &:hover {
-    background-color: var(--color-gray-hover);
+    background-color: color-mix(
+      in srgb,
+      var(--color-background) 20%,
+      transparent
+    );
+
+    border: 3px solid
+      color-mix(in srgb, var(--color-background) 90%, transparent);
 
     .img-box {
       transform: scale(1.1);

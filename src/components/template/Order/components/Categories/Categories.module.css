@@ -1,18 +1,32 @@
-.categories {
-  inline-size: 100%;
+.wrapper {
+  display: grid;
   overflow: hidden;
+
+  .categoris {
+    display: flex;
+    width: max-content;
+    animation: infiniteRoll 20s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-inline-end: 2rem;
+    flex-shrink: 0;
+  }
 }
 
-.swiper {
-  width: 80%;
-  padding-block: 2rem;
-  overflow: hidden;
-}
+@keyframes infiniteRoll {
+  from {
+    transform: translateX(0);
+  }
 
-.slide {
-  width: 10rem !important;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  to {
+    transform: translateX(50%);
+  }
 }

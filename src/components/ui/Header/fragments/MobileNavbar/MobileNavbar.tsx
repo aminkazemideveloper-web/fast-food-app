@@ -13,6 +13,7 @@ import MingcuteCalendarTimeAddLine from "../../../../../icons/MingcuteCalendarTi
 import MingcuteUserQuestionFill from "../../../../../icons/MingcuteUserQuestionFill";
 import MingcutePencil3AiLine from "../../../../../icons/MingcutePencil3AiLine";
 import { useSidebareStore } from "../../../../../stores/sidebar-store";
+import ThemeSwitch from "../../../../shared/ThemeSwitch/ThemeSwitch";
 
 type Props = {
   categories: CategoryType[];
@@ -34,18 +35,18 @@ function MobileNavbar({ categories }: Props) {
   return (
     <nav
       className={clsx(
-        styles.navbar,
+        styles["mobile-navbar"],
         isCollapse && styles.collapse,
-        isOpen === "open" ? styles.isOpen : styles.isclose,
+        isOpen === "open" && styles["navbar-open"],
       )}
     >
-      <div className={styles.header}>
+      <div className={styles.topbar}>
         <IconButton className={styles.btn} onClick={toggleCollaps}>
           <MingcuteArrowLeftFill />
         </IconButton>
         <Logo />
       </div>
-      <ul className={styles.nav}>
+      <ul className={styles.list}>
         {categories?.map((item) => {
           const Icon = iconMap[item.icon];
 
@@ -71,6 +72,8 @@ function MobileNavbar({ categories }: Props) {
           );
         })}
       </ul>
+
+      <ThemeSwitch />
     </nav>
   );
 }

@@ -3,10 +3,9 @@ import { persist } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
 
 import type { ProductType } from "../types/product-type";
+import type { CartItem } from "../types/cart-item-type";
 
-type CartItem = ProductType & {
-  qty: number;
-};
+
 
 type State = {
   cart: CartItem[];

@@ -1,13 +1,15 @@
 .navigation {
   position: fixed;
-  bottom: 7%;
+  bottom: 0;
 
   inline-size: min(22rem, calc(100% - 1rem));
   inset-inline-start: 0;
   inset-inline-end: 0;
   margin-inline: auto;
   background-color: var(--color-backdrup);
-  backdrop-filter: blur(4px);
+
+  backdrop-filter: blur(20px);
+  --webkit-backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
   margin-block-start: 1rem;

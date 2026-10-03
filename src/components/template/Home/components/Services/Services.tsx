@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useGetServvices } from "../../../../../services/hooks/services/useGetServices";
 import type { ServiceType } from "../../../../../types/service-type";
-import HeaderSection from "../../../../ui/HeaderSection/HeaderSection";
+import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 
 import styles from "./Services.module.css";
 import ServiceCard from "../../../../ui/cards/ServiceCard/ServiceCard";

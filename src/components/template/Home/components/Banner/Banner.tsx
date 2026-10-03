@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./Banner.module.css";
 import { useEffect, useRef } from "react";
 import { useGetAllBanners } from "../../../../../services/hooks/banner/useGetAllBanners";
-import HeaderSection from "../../../../ui/HeaderSection/HeaderSection";
+import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 import BannerCard from "../../../../ui/cards/BannerCard/BannerCard";
 
 function Banner() {

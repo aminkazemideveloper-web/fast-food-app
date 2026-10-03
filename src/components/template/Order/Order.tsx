@@ -4,11 +4,12 @@ import styles from "./Order.module.css";
 import type { ProductType } from "../../../types/product-type";
 import type { CategoryProductsType } from "../../../types/category-product-type";
 import Categories from "./components/Categories/Categories";
-import HeaderSection from "../../ui/HeaderSection/HeaderSection";
+import HeaderSection from "../../shared/HeaderSection/HeaderSection";
 import ProductCard from "../../ui/cards/ProductCard/ProductCard";
 import { useLocation } from "react-router";
-import { useEffect } from "react";
-import { useFoodStore } from "../../../stores/food-store";
+import { useEffect, useState } from "react";
+
+import SubCategories from "../../shared/SubCategories/SubCategories";
 
 type Props = {
   products: ProductType[];
@@ -17,10 +18,19 @@ type Props = {
 
 function Order({ products, categories }: Props) {
   const location = useLocation();
+  const [isShowCategory, setIsShowCategory] = useState(false);
 
-  const cart = useFoodStore((state) => state.cart);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsShowCategory(window.scrollY >= 250);
+    };
 
-  console.log(cart);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const hashes = location.hash;
@@ -36,6 +46,9 @@ function Order({ products, categories }: Props) {
   return (
     <div className={clsx(styles.orders, "container")}>
       <Categories categories={categories} />
+      {isShowCategory && (
+        <SubCategories categories={categories} isShow={isShowCategory} />
+      )}
 
       {categories.map((category) => {
         const productsByCategory = products.filter(
@@ -52,7 +65,10 @@ function Order({ products, categories }: Props) {
             id={category.slug}
             key={category.id}
           >
-            <HeaderSection title={category.title} />
+            <HeaderSection
+              title={category.title}
+              sub={`${productsByCategory.length} مورد`}
+            />
 
             <div className={styles["products-wrapper"]}>
               {productsByCategory.map((product) => (

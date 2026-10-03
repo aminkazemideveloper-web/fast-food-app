@@ -1,0 +1,66 @@
+.wrapper {
+  display: grid;
+  inline-size: max-content;
+  align-content: start;
+
+  gap: 0.5rem;
+  .title {
+    display: block;
+    max-inline-size: 100%;
+    text-wrap: nowrap;
+    font-size: var(--font-size-500);
+    font-weight: 500;
+    color: var(--color-primary);
+
+    filter: drop-shadow(
+      0 0 15px color-mix(in srgb, var(--color-primary-light) 50%, transparent)
+    );
+    position: relative;
+    padding: 0.3rem 0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      inline-size: 0;
+      block-size: 2px;
+      border-radius: 999rem;
+      background-color: color-mix(
+        in srgb,
+        var(--color-primary) 50%,
+        transparent
+      );
+      animation: move 2s 0.075s infinite linear;
+    }
+  }
+
+  .sub {
+    font-size: var(--font-size-300);
+    font-weight: 300;
+    color: var(--color-text);
+    filter: opacity(0.6);
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    inline-size: 0%;
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+  25%,
+  75% {
+    inline-size: 50%;
+    background-color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+  50% {
+    inline-size: 100%;
+    background-color: color-mix(
+      in srgb,
+      var(--color-primary) 100%,
+      transparent
+    );
+  }
+}

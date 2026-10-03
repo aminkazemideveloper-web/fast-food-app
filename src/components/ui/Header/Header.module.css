@@ -1,5 +1,4 @@
 .header {
-  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,13 +6,13 @@
   backdrop-filter: blur(4px);
   box-shadow: var(--shadow-normal);
   padding: 0.5rem 1rem;
-  position: fixed;
-  top: 3rem;
-  inline-size: calc(90% - 2rem);
-  inset-inline: auto;
+
+  overflow: hidden;
+
+  inline-size: calc(95% - 1rem);
+  margin-inline: auto;
   border-radius: 999rem;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-block-start: 1rem;
   transition: all 0.2s ease;
   block-size: 3.8rem;
   &:hover {
@@ -22,6 +21,7 @@
 
   .icons {
     font-size: var(--font-size-800);
+    background-color: inherit;
     > svg {
       transform: translateX(0);
       &:hover {

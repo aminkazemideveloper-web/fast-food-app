@@ -1,11 +1,7 @@
 .orders {
   display: grid;
-
+  /* gap: 3rem; */
   inline-size: 100%;
-
-  position: relative;
-  min-block-size: 100vh;
-  overflow: hidden;
 
   .order {
     display: grid;

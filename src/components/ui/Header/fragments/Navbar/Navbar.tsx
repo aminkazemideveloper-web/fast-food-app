@@ -2,13 +2,11 @@ import { NavLink } from "react-router";
 
 import styles from "./Navbar.module.css";
 import clsx from "clsx";
-import type { CategoryType } from "../../../../../types/category-type";
 
-type Props = {
-  categories: CategoryType[];
-};
+import { useGetAllCategories } from "../../../../../services/hooks/category/useGetAllCategories";
 
-function Navbar({ categories }: Props) {
+function Navbar() {
+  const { data: categories } = useGetAllCategories();
   return (
     <ul className={styles.navbar}>
       {categories?.map((category) => (

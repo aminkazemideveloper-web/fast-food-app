@@ -1,0 +1,13 @@
+.cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inline-size: 35rem;
+  /* background-color: var(--color-surface--3); */
+  padding: 1rem;
+  min-block-size: 100%;
+  z-index: 3;
+  display: grid;
+  gap: 2rem;
+  align-content: start;
+}
