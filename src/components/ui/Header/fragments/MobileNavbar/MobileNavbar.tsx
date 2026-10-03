@@ -4,7 +4,7 @@ import styles from "./MobileNavbar.module.css";
 import IconButton from "../../../../shared/IconButton/IconButton";
 import MingcuteArrowLeftFill from "../../../../../icons/MingcuteArrowLeftFill";
 import Logo from "../Logo/Logo";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import type { CategoryType } from "../../../../../types/category-type";
 import MingcuteHome3Line from "../../../../../icons/MingcuteHome3Line";
 import MingcuteChartBarLine from "../../../../../icons/MingcuteChartBarLine";
@@ -13,7 +13,6 @@ import MingcuteCalendarTimeAddLine from "../../../../../icons/MingcuteCalendarTi
 import MingcuteUserQuestionFill from "../../../../../icons/MingcuteUserQuestionFill";
 import MingcutePencil3AiLine from "../../../../../icons/MingcutePencil3AiLine";
 import { useSidebareStore } from "../../../../../stores/sidebar-store";
-import ThemeSwitch from "../../../../shared/ThemeSwitch/ThemeSwitch";
 
 type Props = {
   categories: CategoryType[];
@@ -75,7 +74,7 @@ function MobileNavbar({ categories }: Props) {
             })}
           </ul>
 
-          <ThemeSwitch />
+          <Link to="/order">سفارش</Link>
         </nav>
       )}
     </>
