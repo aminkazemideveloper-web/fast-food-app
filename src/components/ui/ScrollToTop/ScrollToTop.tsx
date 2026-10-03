@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import MingcuteArrowLeftFill from "../../../icons/MingcuteArrowLeftFill";
 import styles from "./ScrollToTop.module.css";
+import clsx from "clsx";
+import IconButton from "../../shared/IconButton/IconButton";
 
 function ScrollToTop() {
   const [isShow, setIsShow] = useState(false);
@@ -25,9 +27,12 @@ function ScrollToTop() {
   return (
     <>
       {isShow && (
-        <div className={styles.scroll} onClick={handleTop}>
+        <IconButton
+          className={clsx(styles.scroll, "action")}
+          onClick={handleTop}
+        >
           <MingcuteArrowLeftFill />
-        </div>
+        </IconButton>
       )}
     </>
   );

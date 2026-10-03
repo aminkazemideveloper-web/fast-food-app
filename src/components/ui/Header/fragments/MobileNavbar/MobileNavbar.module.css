@@ -38,11 +38,8 @@
       display: grid;
       gap: 1rem;
       align-content: start;
-      /* justify-content: start; */
-      /* padding-inline: 1rem; */
-      /* margin-block-start: 1rem; */
+
       .item {
-        /* min-block-size: 3rem; */
         .link {
           grid-template-areas: "label icon";
           gap: -6ch;
@@ -81,11 +78,10 @@
       transition: all 0.7s ease;
       position: absolute;
 
-      top: 75%;
+      top: 100%;
       border: 1px solid
         color-mix(in srgb, var(--color-primary-contrast) 20%, transparent);
-      color: var(--color-primary-contrast);
-      background: color-mix(in srgb, var(--color-primary) 100%, transparent);
+
       right: calc(-2 * 0.5rem);
       > svg {
         transition: all 0.3s ease;

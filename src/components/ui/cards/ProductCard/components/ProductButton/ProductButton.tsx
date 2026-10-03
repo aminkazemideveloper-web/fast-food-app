@@ -23,7 +23,7 @@ function ProductButton({ onAdd, product }: Props) {
     <button
       onClick={handleClick}
       disabled={isLoading}
-      className={clsx(styles.btn, isLoading && styles.loading)}
+      className={clsx(styles.btn, "action", isLoading && styles.loading)}
     >
       {isLoading ? (
         <div className={styles.pending}>

@@ -3,23 +3,52 @@ import styles from "./Actions.module.css";
 
 import useScrollAnimation from "../../../../../hooks/useScrollAnimation";
 import clsx from "clsx";
+import IconButton from "../../../../shared/IconButton/IconButton";
+import MingcuteShoppingBag2Line from "../../../../../icons/MingcuteShoppingBag2Line";
+import MingcuteUser1Fill from "../../../../../icons/MingcuteUser1Fill";
+import { useFoodStore } from "../../../../../stores/food-store";
+import { useEffect, useRef } from "react";
 
 function Actions() {
   const containerRef = useScrollAnimation();
   const location = useLocation();
   const isShow = location.pathname.includes("/order");
-  console.log("isShow", isShow);
+  const cart = useFoodStore((state) => state.cart);
+  const badgeRef = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const badge = badgeRef.current;
+
+    if (!badge) return;
+
+    badge.classList.remove("shake");
+
+    void badge.offsetWidth;
+
+    badge.classList.add("shake");
+  }, [cart.length]);
 
   return (
     <div
       ref={containerRef}
       className={clsx(styles.actions, "animate", "slide-left")}
     >
-      {isShow && <div className={styles["theme-btn"]}>shopping</div>}
       {isShow ? (
-        <Link to="/">ورود</Link>
+        <div className={styles["shop-action"]}>
+          <IconButton className={clsx(styles["shop-btn"], "action")}>
+            <MingcuteShoppingBag2Line />
+
+            <span ref={badgeRef} className={clsx(styles.badge)}>
+              {cart.length ?? 0}
+            </span>
+          </IconButton>
+
+          <Link to="/" className={clsx("action")}>
+            ورود <MingcuteUser1Fill />
+          </Link>
+        </div>
       ) : (
-        <Link className={styles.action} to={"/order"}>
+        <Link className={clsx("action")} to={"/order"}>
           سفارش آنلاین
         </Link>
       )}

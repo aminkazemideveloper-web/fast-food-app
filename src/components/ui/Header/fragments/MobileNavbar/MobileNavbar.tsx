@@ -42,7 +42,10 @@ function MobileNavbar({ categories }: Props) {
           )}
         >
           <div className={styles.topbar}>
-            <IconButton className={styles.btn} onClick={toggleCollaps}>
+            <IconButton
+              className={clsx(styles.btn, "action")}
+              onClick={toggleCollaps}
+            >
               <MingcuteArrowLeftFill />
             </IconButton>
             <Logo />
@@ -74,7 +77,9 @@ function MobileNavbar({ categories }: Props) {
             })}
           </ul>
 
-          <Link to="/order">سفارش</Link>
+          <Link className={"action"} to="/order">
+            سفارش آنلاین
+          </Link>
         </nav>
       )}
     </>

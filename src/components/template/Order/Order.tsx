@@ -50,7 +50,7 @@ function Order({ products, categories }: Props) {
         <SubCategories categories={categories} isShow={isShowCategory} />
       )}
 
-      {categories.map((category) => {
+      {categories?.map((category) => {
         const productsByCategory = products.filter(
           (product) => Number(product.categoryId) === Number(category.id),
         );

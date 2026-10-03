@@ -3,23 +3,34 @@
   align-items: center;
   gap: 1ch;
 
-  .theme-btn {
-    display: none;
-  }
-  .action {
-    display: block;
-    padding: 0.41rem 0.7rem;
-    font-size: var(--font-size-300);
-    background-color: var(--color-primary);
-    color: var(--color-primary-contrast);
-    border-radius: 999rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-normal);
-    &:hover {
-      background-color: var(--color-primary-hover);
-      box-shadow: var(--shadow-heavy);
+  .shop-action {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+
+    .shop-btn {
+      position: relative;
+
+      .badge {
+        position: absolute;
+        top: -30%;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inline-size: 1.5rem;
+        block-size: 1.5rem;
+        background-color: color-mix(
+          in srgb,
+          var(--color-primary) 90%,
+          transparent
+        );
+        color: var(--color-primary-contrast);
+        font-size: var(--font-size-300);
+        border-radius: 999rem;
+        transform: translateX(50%);
+      }
     }
   }
 }
@@ -29,9 +40,6 @@
   .actions {
     .action {
       padding: 0.3rem 0.6rem;
-    }
-    .theme-btn {
-      display: block;
     }
   }
 }
@@ -44,3 +52,4 @@
     }
   }
 }
+

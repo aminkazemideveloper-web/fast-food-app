@@ -40,3 +40,55 @@ textarea {
     box-shadow: var(--shadow-heavy);
   }
 }
+
+.action {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+  padding: 0.41rem 0.7rem;
+  font-size: var(--font-size-300);
+  background: linear-gradient(
+    to left,
+    color-mix(in srgb, var(--color-primary-fade) 10%, transparent),
+    color-mix(in srgb, var(--color-primary-light) 20%, transparent),
+    color-mix(in srgb, var(--color-primary) 40%, transparent)
+  );
+  color: var(--color-primary-contrast);
+  border-radius: 999rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary-contrast) 20%, transparent);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 5px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  &:hover {
+    color: color-mix(in srgb, var(--color-primary-fade) 80%, transparent);
+
+    background: linear-gradient(
+      to left,
+      color-mix(in srgb, var(--color-backdrup) 50%, transparent),
+      color-mix(in srgb, var(--color-primary-contrast) 20%, transparent),
+      color-mix(in srgb, var(--color-primary) 30%, transparent)
+    );
+    box-shadow: 0 0 5px
+      color-mix(in srgb, var(--color-primary) 40%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--color-primary-contrast) 50%, transparent);
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) {
+  .action {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* desktop size */
+@media screen and (min-width: 1024px) {
+  .action {
+    padding: 0.4rem 1.2rem;
+  }
+}
