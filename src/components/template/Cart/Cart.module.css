@@ -1,13 +1,122 @@
 .cart {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  inline-size: 35rem;
-  /* background-color: var(--color-surface--3); */
+  right: 0;
+  inline-size: min(30rem, 70% - 1rem);
+
   padding: 1rem;
-  min-block-size: 100%;
-  z-index: 3;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  z-index: 10;
   display: grid;
-  gap: 2rem;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.5rem;
   align-content: start;
+
+  background: linear-gradient(
+    to left,
+    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
+    color-mix(in srgb, var(--color-primary) 20%, transparent),
+    color-mix(in srgb, var(--color-backdrup) 80%, transparent)
+  );
+
+  border: 2px solid
+    color-mix(in srgb, var(--color-primary-contrast) 6%, transparent);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    0 0 30px color-mix(in srgb, var(--color-primary) 10%, transparent),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  &:hover {
+    border: 2px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block-end: 1rem;
+    border-block-end: 2px solid
+      color-mix(in srgb, var(--color-primary) 30%, transparent);
+    .content {
+      color: var(--color-primary);
+      font-size: var(--font-size-500);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1ch;
+      > strong {
+        color: color-mix(
+          in srgb,
+          var(--color-primary-contrast) 60%,
+          var(--color-primary) 20%
+        );
+      }
+    }
+  }
+
+  .visual {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    .wrapper {
+      padding: 1rem 0.4rem;
+      max-block-size: 300px;
+      overflow-y: auto;
+      display: grid;
+      scrollbar-color: color-mix(in srgb, var(--color-primary) 80%, transparent)
+        color-mix(in srgb, var(--color-primary) 10%, transparent);
+      scrollbar-width: thin;
+      gap: 0.5rem;
+    }
+
+    .written {
+      background-color: var(--color-backdrup);
+      backdrop-filter: blur(4px);
+      box-shadow: var(--shadow-normal);
+      padding: 1rem 0.5rem;
+      border-radius: 1rem;
+      display: grid;
+      gap: 1rem;
+      padding-inline: 1rem;
+      font-size: var(--font-size-300);
+      color: color-mix(
+        in srgb,
+        var(--color-primary-contrast) 80%,
+        var(--color-primary) 30%
+      );
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+
+        span {
+          font-size: 0.8em;
+          margin-inline-start: 1ch;
+        }
+
+        > strong {
+          color: var(--color-primary);
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  .btn {
+    justify-self: end;
+    padding: 0.6rem 2.2rem;
+    font-size: var(--font-size-500);
+    outline: none;
+  }
 }

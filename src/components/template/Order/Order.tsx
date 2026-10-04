@@ -10,6 +10,9 @@ import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
 
 import SubCategories from "../../shared/SubCategories/SubCategories";
+import Cart from "../Cart/Cart";
+import Overlay from "../../shared/Overlay/Overlay";
+import { useFoodStore } from "../../../stores/food-store";
 
 type Props = {
   products: ProductType[];
@@ -18,6 +21,7 @@ type Props = {
 
 function Order({ products, categories }: Props) {
   const location = useLocation();
+  const openCart = useFoodStore((state) => state.isOpen);
   const [isShowCategory, setIsShowCategory] = useState(false);
 
   useEffect(() => {
@@ -78,6 +82,13 @@ function Order({ products, categories }: Props) {
           </section>
         );
       })}
+
+      {openCart && (
+        <div>
+          <Cart />
+          <Overlay />
+        </div>
+      )}
     </div>
   );
 }

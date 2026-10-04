@@ -15,6 +15,8 @@ function Actions() {
   const isShow = location.pathname.includes("/order");
   const cart = useFoodStore((state) => state.cart);
   const badgeRef = useRef<HTMLSpanElement | null>(null);
+  const toggleOpenCart = useFoodStore((state) => state.toggleOpen);
+  const isOpenCart = useFoodStore((state) => state.isOpen);
 
   useEffect(() => {
     const badge = badgeRef.current;
@@ -28,6 +30,17 @@ function Actions() {
     badge.classList.add("shake");
   }, [cart.length]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpenCart ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpenCart]);
+  const handleToggleCartButtonClick = () => {
+    toggleOpenCart();
+  };
+
   return (
     <div
       ref={containerRef}
@@ -35,7 +48,10 @@ function Actions() {
     >
       {isShow ? (
         <div className={styles["shop-action"]}>
-          <IconButton className={clsx(styles["shop-btn"], "action")}>
+          <IconButton
+            className={clsx(styles["shop-btn"], "action")}
+            onClick={handleToggleCartButtonClick}
+          >
             <MingcuteShoppingBag2Line />
 
             <span ref={badgeRef} className={clsx(styles.badge)}>

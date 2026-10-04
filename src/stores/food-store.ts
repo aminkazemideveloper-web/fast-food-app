@@ -5,10 +5,9 @@ import { immer } from "zustand/middleware/immer";
 import type { ProductType } from "../types/product-type";
 import type { CartItem } from "../types/cart-item-type";
 
-
-
 type State = {
   cart: CartItem[];
+  isOpen: boolean;
 };
 
 type Action = {
@@ -17,12 +16,21 @@ type Action = {
   increaseQty: (id: string) => void;
   decreaseQty: (id: string) => void;
   clearCart: () => void;
+
+  toggleOpen: () => void;
 };
 
 export const useFoodStore = create<State & Action>()(
   persist(
     immer((set) => ({
       cart: [],
+      isOpen: false,
+
+      toggleOpen: () => {
+        set((state) => {
+          state.isOpen = !state.isOpen;
+        });
+      },
 
       addToCart: (product) => {
         set((state) => {

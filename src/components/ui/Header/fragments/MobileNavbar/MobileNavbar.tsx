@@ -4,7 +4,7 @@ import styles from "./MobileNavbar.module.css";
 import IconButton from "../../../../shared/IconButton/IconButton";
 import MingcuteArrowLeftFill from "../../../../../icons/MingcuteArrowLeftFill";
 import Logo from "../Logo/Logo";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import type { CategoryType } from "../../../../../types/category-type";
 import MingcuteHome3Line from "../../../../../icons/MingcuteHome3Line";
 import MingcuteChartBarLine from "../../../../../icons/MingcuteChartBarLine";
@@ -13,6 +13,7 @@ import MingcuteCalendarTimeAddLine from "../../../../../icons/MingcuteCalendarTi
 import MingcuteUserQuestionFill from "../../../../../icons/MingcuteUserQuestionFill";
 import MingcutePencil3AiLine from "../../../../../icons/MingcutePencil3AiLine";
 import { useSidebareStore } from "../../../../../stores/sidebar-store";
+import { useFoodStore } from "../../../../../stores/food-store";
 
 type Props = {
   categories: CategoryType[];
@@ -22,7 +23,7 @@ function MobileNavbar({ categories }: Props) {
   const isCollapse = useSidebareStore((state) => state.isCollaps);
   const isOpen = useSidebareStore((state) => state.isOpen);
   const toggleCollaps = useSidebareStore((state) => state.toggleSidebar);
-
+  const toggleCart = useFoodStore((state) => state.toggleOpen);
   const iconMap = {
     MingcuteHome3Line,
     MingcuteChartBarLine,
@@ -31,6 +32,11 @@ function MobileNavbar({ categories }: Props) {
     MingcuteUserQuestionFill,
     MingcutePencil3AiLine,
   };
+
+  const location = useLocation();
+
+  const isLocation = location.pathname.includes("/order");
+
   return (
     <>
       {isOpen && (
@@ -77,9 +83,23 @@ function MobileNavbar({ categories }: Props) {
             })}
           </ul>
 
-          <Link className={"action"} to="/order">
-            سفارش آنلاین
-          </Link>
+          <div className={styles.actions}>
+            {isLocation ? (
+              <div className={styles.actions}>
+                <Link className={"action"} to="/home">
+                  ورود | ثبت نام
+                </Link>
+                <button onClick={() => toggleCart()} className={"action"}>
+                  {" "}
+                  سبد خرید
+                </button>
+              </div>
+            ) : (
+              <Link className={"action"} to="/order">
+                سفارش آنلاین
+              </Link>
+            )}
+          </div>
         </nav>
       )}
     </>

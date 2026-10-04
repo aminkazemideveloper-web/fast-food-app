@@ -1,11 +1,12 @@
 .cart-item {
   width: 100%;
-
+  block-size: 5rem;
+  border-radius: 0.5rem;
   display: flex;
 
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-surface--1);
+  flex: 1 0 auto;
   padding: 0.2rem 0.5rem;
 
   .profile {
@@ -37,37 +38,39 @@
   .actions {
     display: flex;
     align-items: center;
+    border-radius: 0.5rem;
+
+    background-color: var(--color-backdrup);
+    backdrop-filter: blur(4px);
+    box-shadow: var(--shadow-normal);
+    padding: 0.3rem 0.5rem;
+
+    &:hover {
+      box-shadow: var(--shadow-heavy);
+    }
 
     .info {
       color: var(--color-success);
 
-      border-radius: 999rem;
+      border-radius: 0.3rem;
       transition: all 0.2s ease;
 
       &:hover {
         color: var(--color-success-hover);
-        background-color: var(--color-success-light);
       }
     }
     .remove {
       color: var(--color-danger);
       transition: all 0.2s ease;
-
+      border-radius: 0.3rem;
       &:hover {
         color: var(--color-danger-hover);
-        background-color: var(--color-danger-light);
       }
     }
-    .edit {
-      color: var(--color-primary);
-
-      border-radius: 999rem;
-      transition: all 0.2s ease;
-
-      &:hover {
-        color: var(--color-primary-hover);
-        background-color: var(--color-primary-light);
-      }
+    .qty {
+      color: var(--color-primary-contrast);
+      padding-inline: 0.5rem;
+      font-size: var(--font-size-300);
     }
   }
 

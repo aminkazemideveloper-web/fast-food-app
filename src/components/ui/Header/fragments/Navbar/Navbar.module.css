@@ -72,7 +72,7 @@
     top: 2.5rem;
     inset-inline: 0;
     margin-inline: auto;
-    z-index: 999;
+    z-index: 7;
     background: linear-gradient(
       to left,
       color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
