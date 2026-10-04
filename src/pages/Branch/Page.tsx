@@ -9,13 +9,8 @@ function BranchPage() {
     document.title = "شعبه ها";
   }, []);
 
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    status,
-  } = useGetAllBranches();
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
+    useGetAllBranches();
 
   const observerRef = useRef<HTMLDivElement | null>(null);
 
@@ -28,11 +23,7 @@ function BranchPage() {
       (entries) => {
         const firstEntry = entries[0];
 
-        if (
-          firstEntry.isIntersecting &&
-          hasNextPage &&
-          !isFetchingNextPage
-        ) {
+        if (firstEntry.isIntersecting && hasNextPage && !isFetchingNextPage) {
           fetchNextPage();
         }
       },
@@ -52,11 +43,7 @@ function BranchPage() {
         observer.unobserve(currentElement);
       }
     };
-  }, [
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-  ]);
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   if (status === "pending") {
     return <div>در حال دریافت...</div>;
@@ -73,7 +60,11 @@ function BranchPage() {
       <div ref={observerRef}>
         {isFetchingNextPage && <p>در حال دریافت شعبه‌های بیشتر...</p>}
 
-        {!hasNextPage && <p>همه شعبه‌ها نمایش داده شدند.</p>}
+        {!hasNextPage && (
+          <p style={{ textAlign: "center", marginBlockStart: "3rem" }}>
+            همه شعبه‌ها نمایش داده شدند.
+          </p>
+        )}
       </div>
     </div>
   );

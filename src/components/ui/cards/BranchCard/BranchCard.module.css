@@ -2,7 +2,7 @@
   inline-size: clamp(12rem, 20vw, 16rem);
 
   transition:
-    background-color 0.3s ease,
+    transform 0.3s ease,
     border-color 0.3s ease;
 
   border-radius: 0.5rem;
@@ -17,13 +17,6 @@
     0 0 30px color-mix(in srgb, var(--color-primary) 10%, transparent),
     inset 0 1px 1px rgba(255, 255, 255, 0.2),
     inset 0 -1px 1px rgba(255, 255, 255, 0.05);
-
-  background: linear-gradient(
-    to left,
-    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
-    color-mix(in srgb, var(--color-primary) 20%, transparent),
-    color-mix(in srgb, var(--color-backdrup) 80%, transparent)
-  );
 
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -102,13 +95,7 @@
 
   &:hover {
     border: 2px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
-
-    background: linear-gradient(
-      to left,
-      color-mix(in srgb, var(--color-backdrup) 50%, transparent),
-      color-mix(in srgb, var(--color-primary-contrast) 20%, transparent),
-      color-mix(in srgb, var(--color-primary) 30%, transparent)
-    );
+    transform: translateY(-6px);
 
     .wrapper {
       overflow-y: visible;
