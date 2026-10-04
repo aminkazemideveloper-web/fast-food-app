@@ -1,6 +1,150 @@
 .branch-card {
-  inline-size: 14rem;
-  block-size: 14rem;
+  inline-size: clamp(12rem, 20vw, 16rem);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  border-radius: 0.5rem;
   display: grid;
   justify-items: center;
+
+  border: 2px solid
+    color-mix(in srgb, var(--color-primary-contrast) 6%, transparent);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    0 0 30px color-mix(in srgb, var(--color-primary) 10%, transparent),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+
+  background: linear-gradient(
+    to left,
+    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
+    color-mix(in srgb, var(--color-primary) 20%, transparent),
+    color-mix(in srgb, var(--color-backdrup) 80%, transparent)
+  );
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  .image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+    inline-size: 100%;
+    min-block-size: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        color-mix(in srgb, var(--color-backdrup) 30%, transparent) 70%,
+        var(--color-backdrup) 100%
+      );
+    }
+    > img {
+      inline-size: 100%;
+      object-fit: cover;
+    }
+  }
+  .wrapper {
+    padding: 0.5rem 0.3rem;
+    block-size: 6rem;
+    overflow-y: hidden;
+    display: grid;
+    inline-size: 100%;
+    justify-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+
+    inline-size: 100%;
+    transition: all 0.3s ease-in;
+
+    .content {
+      position: relative;
+      display: grid;
+      /* padding-inline: 0.5rem; */
+      justify-items: center;
+      inline-size: 100%;
+      top: 10px;
+      transition:
+        transform 0.5s ease,
+        block-size 0.3s ease;
+      > h3 {
+        position: relative;
+        top: -50%;
+        font-size: var(--font-size-300);
+
+        color: var(--color-primary);
+      }
+      > strong {
+        font-size: var(--font-size-200);
+        inline-size: 100%;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .link {
+        opacity: 0;
+        visibility: visible;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+        color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+      }
+    }
+  }
+
+  &:hover {
+    border: 2px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+
+    background: linear-gradient(
+      to left,
+      color-mix(in srgb, var(--color-backdrup) 50%, transparent),
+      color-mix(in srgb, var(--color-primary-contrast) 20%, transparent),
+      color-mix(in srgb, var(--color-primary) 30%, transparent)
+    );
+
+    .wrapper {
+      overflow-y: visible;
+      background: linear-gradient(
+        to bottom,
+        var(--color-backdrup),
+        transparent
+      );
+      backdrop-filter: blur(6px);
+      .content {
+        background: linear-gradient(
+          to bottom,
+          var(--color-backdrup),
+          transparent
+        );
+        backdrop-filter: blur(6px);
+        box-shadow: 0 -30px 10px rgba(0, 0, 0, 0.7);
+        top: 0;
+        block-size: auto;
+        transform: translateY(-40px);
+
+        > h3 {
+          font-size: 1.3em;
+        }
+        > strong {
+          display: block;
+          -webkit-line-clamp: unset;
+          overflow: visible;
+        }
+
+        .link {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
 }
