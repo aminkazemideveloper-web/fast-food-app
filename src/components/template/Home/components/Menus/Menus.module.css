@@ -1,0 +1,33 @@
+.menus {
+  display: grid;
+  gap: 1.5rem;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+@media screen and (min-width: 548px) {
+  .menus {
+    .wrapper {
+      gap: 0.7rem;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .menus {
+    .wrapper {
+      gap: 0.9rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menus {
+    .wrapper {
+      gap: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.menu-card {
+  inline-size: clamp(8rem, 10vw, 12rem);
+  aspect-ratio: 1/1;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-background);
+
+  transition: border-color 0.3s ease-in-out;
+
+  border: 2px solid
+    color-mix(in srgb, var(--color-primary-contrast) 12%, transparent);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  .img-box {
+    inline-size: 80%;
+    /* inline-size: 100%; */
+    img {
+      inline-size: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      transition: transform 0.3s ease-in;
+    }
+  }
+
+  .title {
+    font-size: var(--font-size-300);
+    transition: color 0.3s ease-in;
+    color: var(--color-primary-contrast);
+  }
+
+  &:hover {
+    border-color: color-mix(
+      in srgb,
+      var(--color-primary-fade) 65%,
+      transparent
+    );
+
+    .img-box {
+      > img {
+        transform: scale(1.1);
+      }
+    }
+
+    .title {
+      color: color-mix(
+        in srgb,
+        var(--color-primary) 65%,
+        var(--color-primary-contrast) 25%
+      );
+      filter: brightness(1);
+    }
+  }
+}
