@@ -15,13 +15,13 @@ function Categories({ categories }: Props) {
     <section className={clsx(styles.wrapper, "container")}>
       <div className={clsx(styles.categoris)}>
         <div className={styles.group}>
-          {categories.map((category) => (
+          {categories?.map((category) => (
             <CategoryCard key={`first-${category.id}`} category={category} />
           ))}
         </div>
 
         <div className={styles.group}>
-          {categories.map((category) => (
+          {categories?.map((category) => (
             <CategoryCard key={`second-${category.id}`} category={category} />
           ))}
         </div>

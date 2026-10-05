@@ -10,7 +10,7 @@ export const useGetAllBranches = () => {
     initialPageParam: 1,
 
     getNextPageParam: (lastPage, allPages) => {
-      if (lastPage.length === 10) {
+      if (lastPage.length === 16) {
         return allPages.length + 1;
       }
 

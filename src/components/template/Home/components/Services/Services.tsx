@@ -1,13 +1,18 @@
 import clsx from "clsx";
-import { useGetServvices } from "../../../../../services/hooks/services/useGetServices";
+import { useGetServices } from "../../../../../services/hooks/services/useGetServices";
 import type { ServiceType } from "../../../../../types/service-type";
 import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 
 import styles from "./Services.module.css";
 import ServiceCard from "../../../../ui/cards/ServiceCard/ServiceCard";
+import ErrorPage from "../../../../../pages/Error/Page";
 
 function Services() {
-  const { data } = useGetServvices();
+  const { data, status } = useGetServices();
+
+  if (status === "pending") return <div>is pending ...</div>;
+
+  if (status === "error") return <ErrorPage />;
 
   return (
     <div className={clsx(styles.services, "container")}>

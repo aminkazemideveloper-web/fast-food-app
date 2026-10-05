@@ -1,13 +1,14 @@
-import { useFoodStore } from "../../../stores/food-store";
+import type { ReactNode } from "react";
+
 import styles from "./Overlay.module.css";
 
-function Overlay() {
-  const toggleCart = useFoodStore((state) => state.toggleOpen);
-  return (
-    <div className={styles.overlay} onClick={() => toggleCart()}>
-      Overlay
-    </div>
-  );
-}
+type Props = {
+  onClose: () => void;
+};
+
+const Overlay = ({ onClose }: Props): ReactNode => {
+  // const toggleCart = useFoodStore((state) => state.toggleOpen);
+  return <div className={styles.overlay} onClick={onClose}></div>;
+};
 
 export default Overlay;

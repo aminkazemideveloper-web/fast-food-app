@@ -1,26 +1,26 @@
 .sub-categories {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.5rem 0.2rem;
+  gap: 0.2rem;
+  padding: 0.3rem;
   border-radius: 0 0 0.5rem 0.5rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-  inline-size: min(40rem, calc(100% - 2rem));
+  inline-size: min(40rem, 100%);
   text-align: center;
   margin-inline: auto;
   position: sticky;
-  top: 1rem;
+  top: 0;
   padding-inline: 1rem;
   z-index: 8;
 
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--color-primary-contrast) 12%, transparent),
-    color-mix(in srgb, var(--color-primary) 7%, transparent) 45%,
-    color-mix(in srgb, var(--color-primary-contrast) 5%, transparent)
+    color-mix(in srgb, var(--color-backdrup) 80%, transparent) 45%
   );
 
   backdrop-filter: blur(24px) saturate(160%);
@@ -45,9 +45,9 @@
     gap: 0.2rem;
     min-inline-size: 0;
     max-inline-size: 100%;
-    padding: 0.3rem 0.7rem;
-    font-size: var(--font-size-300);
-    font-weight: 500;
+    padding: 0.2rem;
+    font-size: var(--font-size-200);
+    font-weight: 300;
     /* Glass */
     background: linear-gradient(
       135deg,
@@ -58,7 +58,7 @@
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     border: 1px solid
       color-mix(in srgb, var(--color-primary-fade) 5%, transparent);
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     outline: none;
     cursor: pointer;
     box-shadow:
@@ -73,15 +73,15 @@
 
     .title {
       font-size: var(--font-size-300);
-      font-weight: 400;
+      font-weight: 300;
       color: var(--color-primary-contrast);
     }
     .img-box {
       display: flex;
       align-items: center;
       justify-content: center;
-      inline-size: 2rem;
-      block-size: 2rem;
+      inline-size: 1.7rem;
+      block-size: 1.7;
       border-radius: 999rem;
       /* overflow: hidden; */
       box-shadow:

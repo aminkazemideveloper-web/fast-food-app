@@ -39,7 +39,7 @@ function MobileNavbar({ categories }: Props) {
 
   return (
     <>
-      {isOpen && (
+      {isOpen === "open" && (
         <nav
           className={clsx(
             styles["mobile-navbar"],
@@ -50,14 +50,14 @@ function MobileNavbar({ categories }: Props) {
           <div className={styles.topbar}>
             <IconButton
               className={clsx(styles.btn, "action")}
-              onClick={toggleCollaps}
+              onClick={() => toggleCollaps()}
             >
               <MingcuteArrowLeftFill />
             </IconButton>
             <Logo />
           </div>
           <ul className={styles.list}>
-            {categories?.map((item) => {
+            {categories.map((item) => {
               const Icon = iconMap[item.icon];
 
               return (

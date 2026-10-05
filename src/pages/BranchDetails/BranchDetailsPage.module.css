@@ -1,0 +1,30 @@
+.branch-details {
+  min-block-size: calc(100dvh - 8rem);
+  padding-block: 3rem;
+
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+}
+
+/* Back button */
+
+.back {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--color-primary-contrast);
+  font-size: var(--font-size-300);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back:hover {
+  color: var(--color-primary);
+  transform: translateX(-5px);
+}

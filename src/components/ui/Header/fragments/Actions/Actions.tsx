@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router";
 import styles from "./Actions.module.css";
 
-import useScrollAnimation from "../../../../../hooks/useScrollAnimation";
 import clsx from "clsx";
 import IconButton from "../../../../shared/IconButton/IconButton";
 import MingcuteShoppingBag2Line from "../../../../../icons/MingcuteShoppingBag2Line";
@@ -10,7 +9,6 @@ import { useFoodStore } from "../../../../../stores/food-store";
 import { useEffect, useRef } from "react";
 
 function Actions() {
-  const containerRef = useScrollAnimation();
   const location = useLocation();
   const isShow = location.pathname.includes("/order");
   const cart = useFoodStore((state) => state.cart);
@@ -42,12 +40,9 @@ function Actions() {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className={clsx(styles.actions, "animate", "slide-left")}
-    >
+    <div className={clsx(styles.actions)}>
       {isShow ? (
-        <div className={styles["shop-action"]}>
+        <div className={clsx(styles["shop-action"])}>
           <IconButton
             className={clsx(styles["shop-btn"], "action")}
             onClick={handleToggleCartButtonClick}

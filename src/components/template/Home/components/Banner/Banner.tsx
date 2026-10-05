@@ -5,9 +5,10 @@ import { useEffect, useRef } from "react";
 import { useGetAllBanners } from "../../../../../services/hooks/banner/useGetAllBanners";
 import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 import BannerCard from "../../../../ui/cards/BannerCard/BannerCard";
+import ErrorPage from "../../../../../pages/Error/Page";
 
 function Banner() {
-  const { data } = useGetAllBanners();
+  const { data, status } = useGetAllBanners();
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -34,6 +35,9 @@ function Banner() {
 
     return () => observer.disconnect();
   }, [data?.length]);
+
+  if (status === "pending") return <div>is pending ...</div>;
+  if (status === "error") return <ErrorPage />;
 
   return (
     <div className={clsx(styles.banner, "container")}>

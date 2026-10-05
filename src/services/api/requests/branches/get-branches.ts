@@ -7,11 +7,8 @@ export const GetBranches = async ({
   pageParam?: number;
 }): Promise<BranchType[]> => {
   const response = await apiRequest.get(
-    `/branches?_page=${pageParam}&_limit=10`,
+    `/branches?_page=${pageParam}&_limit=16`,
   );
-
-  console.log("RESPONSE:", response);
-  console.log("RESPONSE DATA:", response.data);
 
   return response.data;
 };

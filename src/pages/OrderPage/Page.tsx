@@ -12,8 +12,6 @@ function OrderPage() {
     document.title = "سفارشات";
   }, []);
 
-  console.log("products", products);
-
   if (isPending) return <div>loading</div>;
 
   return (

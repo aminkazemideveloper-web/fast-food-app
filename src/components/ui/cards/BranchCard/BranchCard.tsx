@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { BranchType } from "../../../../types/branch-type";
 import styles from "./BranchCard.module.css";
 
@@ -14,9 +15,12 @@ function BranchCard({ branch }: Props) {
 
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <h3>{branch.region}</h3>
+          <Link className={styles.link} to={`/branches/${branch.branchId}`}>
+            {branch.region}
+          </Link>
+
           <strong>{branch.address}</strong>
-          <a className={styles.link} href={`tel:${branch.tell}`}>
+          <a className={styles.tell} href={`tel:${branch.tell}`}>
             {branch.tell}
           </a>
         </div>

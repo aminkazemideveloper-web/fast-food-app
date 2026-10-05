@@ -11,6 +11,7 @@ import SalePage from "./src/pages/SaleB2B/Page";
 import NotFoundPage from "./src/pages/NotFound/Page";
 import BlogPage from "./src/pages/Blog/Page";
 import OrderPage from "./src/pages/OrderPage/Page";
+import BranchDetailsPage from "./src/pages/BranchDetails/page";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, loader: () => redirect("/home") },
       { path: "home", element: <HomePage /> },
-      { path: "branchs", element: <BranchPage /> },
+      { path: "branches", element: <BranchPage /> },
+      { path: "branches/:branchId", element: <BranchDetailsPage /> },
       { path: "blogs", element: <BlogPage /> },
       { path: "order", element: <OrderPage /> },
       { path: "contact", element: <ContactPage /> },

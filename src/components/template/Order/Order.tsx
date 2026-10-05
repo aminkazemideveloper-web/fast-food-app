@@ -22,6 +22,7 @@ type Props = {
 function Order({ products, categories }: Props) {
   const location = useLocation();
   const openCart = useFoodStore((state) => state.isOpen);
+  const toggleCart = useFoodStore((state) => state.toggleOpen);
   const [isShowCategory, setIsShowCategory] = useState(false);
 
   useEffect(() => {
@@ -86,7 +87,7 @@ function Order({ products, categories }: Props) {
       {openCart && (
         <div>
           <Cart />
-          <Overlay />
+          <Overlay onClose={toggleCart} />
         </div>
       )}
     </div>
