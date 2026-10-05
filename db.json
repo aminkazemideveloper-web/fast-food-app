@@ -95,43 +95,73 @@
       "id": 7,
       "title": "کمبو",
       "slug": "combo",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/33078/food.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1307/%DA%A9%D9%85%D8%A8%D9%88.jpg"
     },
     {
       "id": 1,
-      "title": "پیتزا",
-      "slug": "pizza",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21981/makhlout-plus-23.jpg"
+      "title": "پیتزا 30 سانتی",
+      "slug": "pizza-30",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1309/%D9%BE%DB%8C%D8%AA%D8%B2%D8%A7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "مینیتزا",
+      "slug": "pizza-mini",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1319/%D9%85%DB%8C%D9%86%DB%8C%D8%AA%D8%B2%D8%A7.jpg"
+    },
+    {
+      "id": 9,
+      "title": "استرامبولی",
+      "slug": "strambolly",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1310/%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D9%85%D8%A8%D9%88%D9%84%DB%8C.jpg"
+    },
+    {
+      "id": 10,
+      "title": "فیتکس",
+      "slug": "pizza-fitcas",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1311/%D9%81%DB%8C%D8%AA%DA%A9%D8%B3.jpg"
+    },
+    {
+      "id": 11,
+      "title": "پاستارونی",
+      "slug": "pastaroni",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1320/%D9%BE%D8%A7%D8%B3%D8%AA%D8%B1%D9%88%D9%86%DB%8C.jpg"
+    },
+    {
+      "id": 12,
+      "title": "سالاد",
+      "slug": "salad",
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1320/%D9%BE%D8%A7%D8%B3%D8%AA%D8%B1%D9%88%D9%86%DB%8C.jpg"
     },
     {
       "id": 2,
       "title": "برگر",
       "slug": "burger",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22261/fresh-cheez-burger-plus.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1314/%D8%A8%D8%B1%DA%AF%D8%B1.jpg"
     },
     {
       "id": 3,
       "title": "سوخاری",
       "slug": "fried-chicken",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/22452/shokhari8-tike.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1313/%D8%B3%D9%88%D8%AE%D8%A7%D8%B1%DB%8C.jpg"
     },
     {
       "id": 4,
       "title": "پیش‌غذا",
       "slug": "appetizer",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21803/mashroom-frize.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1317/%D9%BE%DB%8C%D8%B4%20%D8%BA%D8%B0%D8%A7.jpg"
     },
     {
       "id": 5,
       "title": "ساندویچ و رپ",
       "slug": "sandwich",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/32871/ezar-sokhari-paniri.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1315/%D8%B3%D8%A7%D9%86%D8%AF%D9%88%DB%8C%DA%86%20%DA%AF%D8%B1%D9%85.jpg"
     },
     {
       "id": 6,
       "title": "نوشیدنی",
       "slug": "drink",
-      "image": "https://shilafood.co/Content/images/4418/Product/Thumb3/21773/coca-cola.jpg"
+      "image": "https://shilafood.co/Content/images/4418/shortcutTab/1318/%D9%86%D9%88%D8%B4%DB%8C%D8%AF%D9%86%DB%8C.jpg"
     }
   ],
   "products": [

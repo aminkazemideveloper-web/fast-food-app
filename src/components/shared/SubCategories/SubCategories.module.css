@@ -51,8 +51,8 @@
     /* Glass */
     background: linear-gradient(
       135deg,
-      color-mix(in srgb, var(--color-primary) 34%, transparent),
-      color-mix(in srgb, var(--color-primary-hover) 50%, transparent)
+      color-mix(in srgb, var(--color-primary-contrast) 14%, transparent),
+      color-mix(in srgb, var(--color-primary) 50%, transparent)
     );
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
@@ -74,19 +74,30 @@
     .title {
       font-size: var(--font-size-300);
       font-weight: 300;
-      color: var(--color-primary-contrast);
+      color: color-mix(
+        in srgb,
+        var(--color-primary-contrast) 90%,
+        var(--color-primary) 10%
+      );
     }
     .img-box {
       display: flex;
       align-items: center;
       justify-content: center;
-      inline-size: 1.7rem;
-      block-size: 1.7;
+      inline-size: 1.4rem;
+      block-size: 1.4;
       border-radius: 999rem;
+      background-color: var(--color-background);
+      /* background-color: color-mix(
+        in srgb,
+        var(--color-primary-contrast) 100%,
+        transparent
+      ); */
       /* overflow: hidden; */
       box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.16),
-        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        inset 0 1px 1px
+          color-mix(in srgb, var(--color-primary) 80%, transparent),
         inset 0 -1px 1px rgba(255, 255, 255, 0.04);
 
       > img {
@@ -100,7 +111,7 @@
       background: linear-gradient(
         135deg,
         color-mix(in srgb, var(--color-primary-fade) 30%, transparent),
-        color-mix(in srgb, var(--color-primary-dark) 35%, transparent)
+        color-mix(in srgb, var(--color-primary-contrast) 35%, transparent)
       );
       border-color: color-mix(
         in srgb,
@@ -109,7 +120,7 @@
       );
       box-shadow:
         0 12px 30px rgba(0, 0, 0, 0.2),
-        0 0 20px color-mix(in srgb, var(--color-primary) 18%, transparent),
+        0 0 20px color-mix(in srgb, var(--color-primary) 8%, transparent),
         inset 0 1px 1px rgba(255, 255, 255, 0.25);
 
       transform: translateY(-2px);
