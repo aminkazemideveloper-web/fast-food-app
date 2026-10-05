@@ -8,10 +8,10 @@ type Props = {
 
 function BranchCard({ branch }: Props) {
   return (
-    <div className={styles["branch-card"]}>
-      <div className={styles["image-box"]}>
+    <article className={styles["branch-card"]}>
+      <Link to={`/branches/${branch.branchId}`} className={styles["image-box"]}>
         <img src={branch.img} alt="" />
-      </div>
+      </Link>
 
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -25,7 +25,7 @@ function BranchCard({ branch }: Props) {
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
