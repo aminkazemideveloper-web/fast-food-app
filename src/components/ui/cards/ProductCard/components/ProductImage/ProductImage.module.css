@@ -28,9 +28,9 @@
     border-radius: 1rem;
 
     background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-primary-contrast) 16%, transparent),
-      color-mix(in srgb, var(--color-primary) 8%, transparent)
+      to top left,
+      color-mix(in srgb, var(--color-primary) 28%, transparent),
+      color-mix(in srgb, var(--color-primary-contrast) 46%, transparent)
     );
 
     backdrop-filter: blur(12px);

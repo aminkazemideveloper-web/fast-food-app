@@ -14,11 +14,10 @@
   gap: 1.5rem;
   align-content: start;
 
-  background: linear-gradient(
-    to left,
-    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
-    color-mix(in srgb, var(--color-primary) 20%, transparent),
-    color-mix(in srgb, var(--color-backdrup) 80%, transparent)
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 20%,
+    var(--color-backdrup) 80%
   );
 
   border: 2px solid
@@ -71,6 +70,7 @@
       padding: 1rem 0.4rem;
       max-block-size: 300px;
       overflow-y: auto;
+      overflow-x: hidden;
       display: grid;
       scrollbar-color: color-mix(in srgb, var(--color-primary) 80%, transparent)
         color-mix(in srgb, var(--color-primary) 10%, transparent);
@@ -84,8 +84,13 @@
         font-size: var(--font-size-300);
         color: var(--color-primary);
         font-weight: 400;
-        background-color: var(--color-backdrup);
-        backdrop-filter: blur(4px);
+        background-color: color-mix(
+          in srgb,
+          var(--color-primary-contrast) 5%,
+          transparent
+        );
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
         box-shadow: var(--shadow-normal);
         border-radius: 1rem;
         corner-shape: squircle;
@@ -93,7 +98,11 @@
     }
 
     .written {
-      background-color: var(--color-backdrup);
+      background-color: color-mix(
+        in srgb,
+        var(--color-primary-contrast) 5%,
+        transparent
+      );
       backdrop-filter: blur(4px);
       box-shadow: var(--shadow-normal);
       padding: 1rem;

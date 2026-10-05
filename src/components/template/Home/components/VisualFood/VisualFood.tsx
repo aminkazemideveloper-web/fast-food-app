@@ -26,30 +26,38 @@ function VisualFood() {
         <div className={styles.wrapper}>
           <Swiper
             slidesPerView={1}
-            spaceBetween={15}
+            spaceBetween={12}
             loop
-            centeredSlides={false}
+            centeredSlides={true}
             pagination={{
               clickable: true,
             }}
-            // modules={[Pagination]}
             className={styles.mySwiper}
             breakpoints={{
               400: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 16,
+                centeredSlides: false,
               },
-              576: {
+              510: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 12,
+                centeredSlides: false,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                centeredSlides: false,
               },
               768: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 16,
+                centeredSlides: false,
               },
-              1200: {
+              1140: {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                spaceBetween: 16,
+                centeredSlides: false,
               },
             }}
           >

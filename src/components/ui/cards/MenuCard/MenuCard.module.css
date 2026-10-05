@@ -1,19 +1,19 @@
 .menu-card {
-  inline-size: clamp(8rem, 10vw, 12rem);
+  inline-size: clamp(5rem, 10vw, 14rem);
   aspect-ratio: 1/1;
   display: grid;
   justify-items: center;
   gap: 0.5rem;
-  background-color: var(--color-background);
+  background-color: color-mix(in srgb, var(--color-zinc-800) 25%, transparent);
 
   transition: border-color 0.3s ease-in-out;
 
   border: 2px solid
     color-mix(in srgb, var(--color-primary-contrast) 12%, transparent);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   .img-box {
-    inline-size: 80%;
+    inline-size: 70%;
     /* inline-size: 100%; */
     img {
       inline-size: 100%;
@@ -24,9 +24,10 @@
   }
 
   .title {
-    font-size: var(--font-size-300);
+    font-size: var(--font-size-200);
     transition: color 0.3s ease-in;
     color: var(--color-primary-contrast);
+    white-space: nowrap;
   }
 
   &:hover {

@@ -6,6 +6,7 @@
   .order {
     display: grid;
     gap: 3rem;
+
     .products-wrapper {
       inline-size: 100%;
       margin-block-end: 2rem;
@@ -61,7 +62,7 @@
 }
 
 /* Desktop */
-@media (min-width: 75rem) {
+@media (min-width: 1024px) {
   .orders {
     .order {
       .products-wrapper {

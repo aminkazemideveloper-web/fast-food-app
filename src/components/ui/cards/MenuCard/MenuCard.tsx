@@ -12,7 +12,7 @@ function MenuCard({ menu }: Props) {
       <div className={styles["img-box"]}>
         <img src={menu.image} alt="" />
       </div>
-      <h5 className={styles.title}>{menu.title}</h5>
+      <h5 className={styles.title}>{menu.title.slice(0, 14)}</h5>
     </Link>
   );
 }

@@ -7,13 +7,75 @@
       overflow-x: hidden;
       .mySwiper {
         position: relative;
-        padding: 4rem 0;
+        min-block-size: 350px;
+        padding-block-start: 2rem;
         overflow-x: hidden;
 
         .actions {
           position: absolute;
-          top: calc(100% - 2rem);
+          top: calc(100% - 3rem);
           right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .visual-food {
+    .contain {
+      .wrapper {
+        .mySwiper {
+          min-block-size: 300px;
+          padding-block-start: 3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 510px) {
+  .visual-food {
+    .contain {
+      .wrapper {
+        .mySwiper {
+          min-block-size: 350px;
+          padding-block-start: 3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 640px) {
+  .visual-food {
+    .contain {
+      .wrapper {
+        .mySwiper {
+          min-block-size: 400px;
+          padding-block-start: 3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .visual-food {
+    .contain {
+      .wrapper {
+        .mySwiper {
+          min-block-size: 350px;
+          padding-block-start: 3rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .visual-food {
+    .contain {
+      .wrapper {
+        .mySwiper {
+          min-block-size: 400px;
+          padding-block-start: 3rem;
         }
       }
     }

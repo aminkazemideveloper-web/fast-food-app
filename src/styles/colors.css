@@ -124,13 +124,16 @@
   --color-gray-light: var(--color-zinc-100);
   --color-gray-contrast: var(--color-white);
 
-  --color-background: oklch(15.556% 0.03242 273.189);
+  --color-background: oklch(10% 0.025 273.189);
   --color-text: light-dark(var(--color-gray-800), var(--color-gray-100));
   --color-text--sub: light-dark(var(--color-gray-600), var(--color-gray-200));
   --color-border: light-dark(var(--color-gray-300), var(--color-gray-600));
   --color-backdrup: light-dark(hsl(0, 0%, 0%, 50%), hsl(0, 0%, 0%, 70%));
 
-  --color-surface--1: light-dark(var(--color-gray-200), var(--color-zinc-900));
+  --color-surface--1: light-dark(
+    var(--color-gray-200),
+    var(--color-background)
+  );
   --color-surface--2: light-dark(var(--color-gray-100), var(--color-zinc-800));
   --color-surface--3: light-dark(var(--color-white), var(--color-zinc-600));
 
