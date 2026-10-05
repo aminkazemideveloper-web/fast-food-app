@@ -76,17 +76,31 @@
         color-mix(in srgb, var(--color-primary) 10%, transparent);
       scrollbar-width: thin;
       gap: 0.5rem;
+
+      .emptyCart {
+        inline-size: 100%;
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: var(--font-size-300);
+        color: var(--color-primary);
+        font-weight: 400;
+        background-color: var(--color-backdrup);
+        backdrop-filter: blur(4px);
+        box-shadow: var(--shadow-normal);
+        border-radius: 1rem;
+        corner-shape: squircle;
+      }
     }
 
     .written {
       background-color: var(--color-backdrup);
       backdrop-filter: blur(4px);
       box-shadow: var(--shadow-normal);
-      padding: 1rem 0.5rem;
+      padding: 1rem;
       border-radius: 1rem;
       display: grid;
       gap: 1rem;
-      padding-inline: 1rem;
+
       font-size: var(--font-size-300);
       color: color-mix(
         in srgb,

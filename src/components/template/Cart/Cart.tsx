@@ -39,7 +39,7 @@ function Cart() {
       <div className={styles.visual}>
         <div className={styles.wrapper}>
           {carts.length === 0 ? (
-            <div>سبد شما خالی میبابشد</div>
+            <div className={styles.emptyCart}>سبد شما خالی میباشد</div>
           ) : (
             carts.map((cart) => <CartItemCard key={cart.id} item={cart} />)
           )}
