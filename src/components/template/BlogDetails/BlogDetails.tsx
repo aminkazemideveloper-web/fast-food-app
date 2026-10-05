@@ -32,7 +32,7 @@ const BlogDetails = () => {
 
           <span>/</span>
 
-          <Link to="/blog">وبلاگ</Link>
+          <Link to="/blogs">وبلاگ</Link>
 
           <span>/</span>
 
@@ -82,7 +82,7 @@ const BlogDetails = () => {
                   <h2 className={styles.sectionTitle}>برندگان کمپین</h2>
                 </div>
 
-                <div className={styles.winnersGrid}>
+                {/* <div className={styles.winnersGrid}>
                   {blog.winners.map((winner) => (
                     <div key={winner.id} className={styles.winnerCard}>
                       <div className={styles.winnerImage}>
@@ -96,7 +96,7 @@ const BlogDetails = () => {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </section>
             )}
           </div>

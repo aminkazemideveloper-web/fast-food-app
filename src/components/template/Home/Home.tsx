@@ -6,6 +6,7 @@ import Services from "./components/Services/Services";
 import Menus from "./components/Menus/Menus";
 import VisualFood from "./components/VisualFood/VisualFood";
 import BlogSection from "./components/BlogSection/BlogSection";
+import AboutSection from "./components/AboutSection/AboutSection";
 
 function Home() {
   return (
@@ -14,8 +15,10 @@ function Home() {
       <Menus />
       <Banner />
       <VisualFood />
-      <Services />
+      <AboutSection />
+      <VisualFood />
       <BlogSection />
+      <Services />
     </div>
   );
 }

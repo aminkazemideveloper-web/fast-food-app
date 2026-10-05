@@ -1,34 +1,81 @@
 .blog {
+  position: relative;
+  padding: 2px;
+  border-radius: 1rem;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  
+  overflow: hidden;
+  /* padding-block: 2rem; */
+
   background: linear-gradient(
-    to top left,
-    color-mix(in srgb, var(--color-primary) 30%, var(--color-danger) 60%),
-    color-mix(
-      in srgb,
-      var(--color-danger-fade) 30%,
-      var(--color-danger-light) 20%
-    ),
-    color-mix(
-      in srgb,
-      var(--color-danger-dark) 30%,
-      var(--color-primary-contrast) 20%
-    ),
-    color-mix(
-      in srgb,
-      var(--color-danger-dark) 30%,
-      var(--color-primary-light) 60%
-    )
+    120deg,
+    var(--color-primary),
+    var(--color-danger),
+    var(--color-danger-light),
+    var(--color-danger-dark),
+    var(--color-primary)
   );
 
-  padding: 0.2rem;
-  border-radius: 1rem;
-  animation: huge 3s infinite linear;
+  background-size: 400% 400%;
+  animation: gradientFlow 3s ease infinite;
+
   .wrapper {
     inline-size: 100%;
+    inline-size: 100%;
+    max-inline-size: 100%;
+    min-inline-size: 0;
+    block-size: 100%;
+    border-radius: inherit;
+  }
+
+  .swiper {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    block-size: 100%;
+    min-inline-size: 0;
+    overflow: hidden;
+    position: relative;
+  } /* خود slide */
+  .swiper :global(.swiper-slide) {
+    inline-size: 100%;
+    min-inline-size: 0;
+    box-sizing: border-box;
+  }
+  .swiper :global(.swiper-wrapper) {
+    block-size: 100%;
   }
 }
 
-@keyframes huge {
-  to {
-    /* filter: hue-rotate(360deg); */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .blog {
+    /* padding-block: 1.5rem; */
+  }
+}
+
+@media (max-width: 600px) {
+  .blog {
+    /* padding-block: 1rem; */
+    /* padding-inline: 0.5rem; */
+  }
+  .wrapper {
+    inline-size: 100%;
+  }
+  .swiper {
+    inline-size: 100%;
   }
 }

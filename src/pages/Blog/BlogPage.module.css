@@ -1,0 +1,372 @@
+.blogPage {
+  min-block-size: 100vh;
+  padding-block: 4rem 6rem;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      color-mix(in srgb, var(--color-primary) 12%, transparent),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      color-mix(in srgb, var(--color-danger) 10%, transparent),
+      transparent 35%
+    ),
+    var(--color-background);
+}
+
+.container {
+  inline-size: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  max-inline-size: 750px;
+  margin-inline: auto;
+  margin-block-end: 3rem;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem 1rem;
+  margin-block-end: 1rem;
+
+  border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-300);
+  font-weight: 700;
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--color-primary-contrast);
+
+  font-size: var(--font-size-800);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.header p {
+  margin: 1rem 0 0;
+
+  color: color-mix(in srgb, var(--color-primary-contrast) 65%, transparent);
+
+  font-size: var(--font-size-400);
+  line-height: 2;
+}
+
+/* =========================
+   Grid
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* =========================
+   Card
+========================= */
+
+.card {
+  min-inline-size: 0;
+  overflow: hidden;
+
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary-contrast) 15%, transparent);
+
+  border-radius: 1.25rem;
+
+  background: color-mix(
+    in srgb,
+    var(--color-primary-contrast) 4%,
+    var(--color-background)
+  );
+
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--color-primary-contrast) 5%, transparent);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+
+  border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+
+  box-shadow: 0 18px 45px
+    color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
+/* =========================
+   Image
+========================= */
+
+.imageBox {
+  position: relative;
+
+  display: block;
+
+  inline-size: 100%;
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: var(--color-primary-contrast);
+
+  text-decoration: none;
+}
+
+.imageBox::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, #000 55%, transparent),
+    transparent 55%
+  );
+
+  opacity: 0.7;
+
+  transition: opacity 0.3s ease;
+}
+
+.imageBox img {
+  display: block;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.card:hover .imageBox img {
+  transform: scale(1.07);
+  filter: saturate(1.1);
+}
+
+.card:hover .imageBox::after {
+  opacity: 0.4;
+}
+
+/* =========================
+   Read More Overlay
+========================= */
+
+.readMore {
+  position: absolute;
+  z-index: 2;
+
+  inset-inline-end: 1rem;
+  inset-block-end: 1rem;
+
+  padding: 0.45rem 0.8rem;
+
+  border: 1px solid color-mix(in srgb, #fff 30%, transparent);
+
+  border-radius: 999px;
+
+  background: color-mix(in srgb, #000 35%, transparent);
+
+  color: #fff;
+
+  font-size: var(--font-size-300);
+  font-weight: 600;
+
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover .readMore {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Card Content
+========================= */
+
+.cardContent {
+  display: grid;
+  gap: 0.25rem;
+
+  padding: 1.25rem;
+}
+
+.cardContent h2 {
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-500);
+  font-weight: 700;
+
+  line-height: 1.8;
+
+  min-block-size: 70px;
+  /* background-color: red; */
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+}
+
+.cardContent p {
+  margin: 0;
+  min-block-size: 78px;
+  /* background-color: blue; */
+  color: color-mix(in srgb, var(--color-primary-contrast) 62%, transparent);
+
+  font-size: var(--font-size-300);
+
+  line-height: 2;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+}
+
+/* =========================
+   Card Link
+========================= */
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-block-start: 0.4rem;
+  padding-block-start: 0.8rem;
+
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent);
+
+  color: var(--color-primary);
+
+  text-decoration: none;
+
+  font-size: var(--font-size-300);
+  font-weight: 700;
+}
+
+.cardLink span {
+  font-size: 1.2rem;
+
+  transition: transform 0.25s ease;
+}
+
+.card:hover .cardLink span {
+  transform: translateX(-5px);
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .blogPage {
+    padding-block: 3rem 4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .header h1 {
+    font-size: var(--font-size-700);
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .blogPage {
+    padding-block: 2rem 3rem;
+  }
+
+  .container {
+    inline-size: calc(100% - 1rem);
+  }
+
+  .header {
+    margin-block-end: 2rem;
+  }
+
+  .header h1 {
+    font-size: var(--font-size-600);
+    line-height: 1.7;
+  }
+
+  .header p {
+    font-size: var(--font-size-300);
+    line-height: 1.9;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+
+  .imageBox {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardContent h2 {
+    font-size: var(--font-size-400);
+  }
+
+  .cardContent p {
+    font-size: var(--font-size-300);
+  }
+
+  /* روی موبایل hover نداریم */
+  .readMore {
+    display: none;
+  }
+}
