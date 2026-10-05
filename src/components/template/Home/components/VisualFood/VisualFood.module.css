@@ -1,0 +1,21 @@
+.visual-food {
+  display: grid;
+  .contain {
+    overflow-x: hidden;
+    .wrapper {
+      padding: 1rem 0;
+      overflow-x: hidden;
+      .mySwiper {
+        position: relative;
+        padding: 4rem 0;
+        overflow-x: hidden;
+
+        .actions {
+          position: absolute;
+          top: calc(100% - 2rem);
+          right: 0;
+        }
+      }
+    }
+  }
+}

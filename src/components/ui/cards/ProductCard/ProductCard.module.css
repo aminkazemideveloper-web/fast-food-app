@@ -35,7 +35,7 @@
     border-color 0.35s ease;
 
   .content {
-    z-index: 1;
+    /* z-index: 1; */
     position: relative;
     top: -40%;
     display: grid;
@@ -81,7 +81,7 @@
     opacity: 0.18;
     filter: blur(18px);
 
-    z-index: -1;
+    /* z-index: -1; */
     pointer-events: none;
 
     transition:
