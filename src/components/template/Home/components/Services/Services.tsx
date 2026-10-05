@@ -7,8 +7,11 @@ import styles from "./Services.module.css";
 import ServiceCard from "../../../../ui/cards/ServiceCard/ServiceCard";
 import ErrorPage from "../../../../../pages/Error/Page";
 
+
 function Services() {
   const { data, status } = useGetServices();
+
+  
 
   if (status === "pending") return <div>is pending ...</div>;
 
@@ -18,7 +21,7 @@ function Services() {
     <div className={clsx(styles.services, "container")}>
       <HeaderSection title="چرا گلبرگ" />
 
-      <div className={styles.wrapper}>
+      <div className={clsx(styles.wrapper)}>
         <div className={styles.group}>
           {data?.map((service: ServiceType) => (
             <ServiceCard key={`first-${service.id}`} service={service} />

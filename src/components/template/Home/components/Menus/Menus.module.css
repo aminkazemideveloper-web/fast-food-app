@@ -5,8 +5,10 @@
   .wrapper {
     display: flex;
     align-items: center;
+    inline-size: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    margin-inline: auto;
     gap: 0.5rem;
   }
 }
@@ -14,12 +16,14 @@
   .menus {
     .wrapper {
       gap: 0.7rem;
+      inline-size: calc(100% -1rem);
     }
   }
 }
 @media screen and (min-width: 768px) {
   .menus {
     .wrapper {
+      inline-size: calc(100% - 15%);
       gap: 0.9rem;
     }
   }
@@ -27,6 +31,7 @@
 @media screen and (min-width: 1024px) {
   .menus {
     .wrapper {
+      inline-size: calc(100% - 20%);
       gap: 1.1rem;
     }
   }

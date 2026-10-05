@@ -1,0 +1,34 @@
+.blog {
+  background: linear-gradient(
+    to top left,
+    color-mix(in srgb, var(--color-primary) 30%, var(--color-danger) 60%),
+    color-mix(
+      in srgb,
+      var(--color-danger-fade) 30%,
+      var(--color-danger-light) 20%
+    ),
+    color-mix(
+      in srgb,
+      var(--color-danger-dark) 30%,
+      var(--color-primary-contrast) 20%
+    ),
+    color-mix(
+      in srgb,
+      var(--color-danger-dark) 30%,
+      var(--color-primary-light) 60%
+    )
+  );
+
+  padding: 0.2rem;
+  border-radius: 1rem;
+  animation: huge 3s infinite linear;
+  .wrapper {
+    inline-size: 100%;
+  }
+}
+
+@keyframes huge {
+  to {
+    /* filter: hue-rotate(360deg); */
+  }
+}

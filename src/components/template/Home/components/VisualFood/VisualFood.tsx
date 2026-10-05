@@ -12,16 +12,50 @@ import "swiper/css/pagination";
 // import { Pagination } from "swiper/modules";
 import ProductCard from "../../../../ui/cards/ProductCard/ProductCard";
 import SwipperActions from "./components/SwipperActions/SwipperActions";
+import { useEffect, useRef } from "react";
 
 function VisualFood() {
   const { data, status } = useGetProducts();
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    if (!container) return;
+    console.log("servise container", container);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    const elements = container.querySelectorAll(".animate");
+    console.log("elements", elements);
+
+    elements.forEach((element) => {
+      console.log("elem", element);
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [status]);
 
   if (status === "pending") return <div>loading ...</div>;
   if (status === "error") return <ErrorPage />;
 
   return (
-    <div className={clsx(styles["visual-food"], "container")}>
-      <div className={clsx(styles.contain, "container")}>
+    <div
+      ref={containerRef}
+      className={clsx(styles["visual-food"], "container")}
+    >
+      <div className={clsx(styles.contain, "container", "animate", "fade-up")}>
         <HeaderSection title="پیشنهاد های اقتصادی" sub="غذاهایی برای خانواده" />
         <div className={styles.wrapper}>
           <Swiper

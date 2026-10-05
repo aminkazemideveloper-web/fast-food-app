@@ -12,6 +12,7 @@ import NotFoundPage from "./src/pages/NotFound/Page";
 import BlogPage from "./src/pages/Blog/Page";
 import OrderPage from "./src/pages/OrderPage/Page";
 import BranchDetailsPage from "./src/pages/BranchDetails/page";
+import BlogDetailPage from "./src/pages/BlogDetailPage/Page";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "branches", element: <BranchPage /> },
       { path: "branches/:branchId", element: <BranchDetailsPage /> },
       { path: "blogs", element: <BlogPage /> },
+      { path: "blogs/:blogId", element: <BlogDetailPage /> },
       { path: "order", element: <OrderPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "shopSotry", element: <StoryPage /> },
