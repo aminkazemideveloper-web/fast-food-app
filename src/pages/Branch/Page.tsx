@@ -1,16 +1,27 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Branch from "../../components/template/Branch/Branch";
 import { useGetAllBranches } from "../../services/hooks/branches/useGetAllBranches";
 import ErrorPage from "../Error/Page";
 import styles from "./BranchPage.module.css";
+import { useDebounce } from "../../hooks/useDebounce";
 
 function BranchPage() {
+  const [search, setSearch] = useState("");
+
+  const { text: debouncedSearch } = useDebounce(search, 500);
+
   useEffect(() => {
     document.title = "شعبه ها";
   }, []);
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
-    useGetAllBranches();
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    status,
+    isFetching: loading,
+  } = useGetAllBranches(debouncedSearch);
 
   const observerRef = useRef<HTMLDivElement | null>(null);
 
@@ -55,7 +66,12 @@ function BranchPage() {
 
   return (
     <div className={styles.branchs}>
-      <Branch branches={branches} />
+      <Branch
+        branches={branches}
+        search={search}
+        onSearch={setSearch}
+        loading={loading}
+      />
 
       <div ref={observerRef}>
         {isFetchingNextPage && (
@@ -64,9 +80,19 @@ function BranchPage() {
           </p>
         )}
 
-        {!hasNextPage && (
+        {loading && !isFetchingNextPage && (
           <p style={{ textAlign: "center", marginBlockStart: "3rem" }}>
-            همه شعبه‌ها نمایش داده شدند.
+            {" "}
+            در حال جستجو...{" "}
+          </p>
+        )}
+
+        {!hasNextPage && !loading && (
+          <p style={{ textAlign: "center", marginBlockStart: "3rem" }}>
+            {" "}
+            {search
+              ? "شعبه‌ای با این مشخصات پیدا نشد."
+              : "همه شعبه‌ها نمایش داده شدند."}{" "}
           </p>
         )}
       </div>

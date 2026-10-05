@@ -1,5 +1,5 @@
 .branch-card {
-  inline-size: clamp(12rem, 20vw, 16rem);
+  inline-size: clamp(150px, 20vw, 16rem);
 
   transition:
     transform 0.3s ease,
