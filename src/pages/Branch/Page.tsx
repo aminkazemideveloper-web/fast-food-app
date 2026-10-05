@@ -58,7 +58,11 @@ function BranchPage() {
       <Branch branches={branches} />
 
       <div ref={observerRef}>
-        {isFetchingNextPage && <p>در حال دریافت شعبه‌های بیشتر...</p>}
+        {isFetchingNextPage && (
+          <p style={{ textAlign: "center", marginBlockStart: "3rem" }}>
+            در حال دریافت شعبه‌های بیشتر...
+          </p>
+        )}
 
         {!hasNextPage && (
           <p style={{ textAlign: "center", marginBlockStart: "3rem" }}>
