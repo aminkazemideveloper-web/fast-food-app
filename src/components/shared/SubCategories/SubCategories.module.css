@@ -1,10 +1,17 @@
 .sub-categories {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.2rem;
-  padding: 0.3rem;
+  flex-wrap: nowrap;
+  padding-block: 0.8rem;
+  overflow-x: scroll;
+  scrollbar-color: color-mix(in srgb, var(--color-primary) 70%, transparent)
+    color-mix(in srgb, var(--color-background) 70%, transparent);
+
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  gap: 0.4rem;
+
   border-radius: 0 0 0.5rem 0.5rem;
   opacity: 0;
   visibility: hidden;
@@ -19,9 +26,9 @@
 
   background: linear-gradient(
     135deg,
-    color-mix(in srgb, var(--color-backdrup) 80%, transparent),
-    color-mix(in srgb, var(--color-primary) 30%, transparent),
-    color-mix(in srgb, var(--color-backdrup) 80%, transparent)
+    color-mix(in srgb, var(--color-background) 80%, transparent),
+    color-mix(in srgb, var(--color-primary) 50%, transparent),
+    color-mix(in srgb, var(--color-background) 80%, transparent)
   );
 
   backdrop-filter: blur(24px) saturate(160%);
@@ -38,17 +45,17 @@
   .sub {
     position: relative;
     isolation: isolate;
-    overflow: hidden;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
-    min-inline-size: 0;
+    white-space: nowrap;
     max-inline-size: 100%;
     padding: 0.2rem;
     font-size: var(--font-size-200);
     font-weight: 300;
-    /* Glass */
+
     background: linear-gradient(
       135deg,
       color-mix(in srgb, var(--color-primary) 84%, transparent),

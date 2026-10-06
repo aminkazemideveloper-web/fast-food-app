@@ -22,7 +22,7 @@
       line-height: 2;
 
       font-weight: 900;
-
+      white-space: wrap;
       letter-spacing: -0.03em;
 
       color: var(--color-text);
@@ -50,8 +50,6 @@
   }
 }
 
-
-
 /* -------------------- */
 /* Desktop */
 /* -------------------- */
@@ -65,5 +63,3 @@
     gap: 1.7rem;
   }
 }
-
-
