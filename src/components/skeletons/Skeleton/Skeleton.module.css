@@ -1,0 +1,51 @@
+.skeleton {
+  position: relative;
+
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 70%,
+    var(--color-primary-contrast) 80%
+  );
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: calc(100% + 10rem);
+    inline-size: 5px;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-contrast),
+      transparent,
+      var(--color-primary-contrast)
+    );
+    transform: translateX(-40%) rotate(20deg);
+    top: -40px;
+    left: -40%;
+
+    animation: effect 1s infinite linear;
+  }
+
+  &.rounded {
+    border-radius: 0.5rem;
+  }
+
+  &.circle {
+    border-radius: 999rem;
+  }
+
+  .card {
+    box-shadow: var(--shadow--normal);
+    border-radius: 1rem;
+  }
+}
+
+@keyframes effect {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}

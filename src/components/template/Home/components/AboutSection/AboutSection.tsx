@@ -19,7 +19,7 @@ function AboutSection() {
         <div className={styles.content}>
           <div
             className={clsx(styles.title, "animate", "fade-up")}
-            style={{ transitionDelay: "0.1s" }}
+            style={{ animationDelay: "0.2s" }}
           >
             <h2>
               چیزی بیشتر از
@@ -30,11 +30,11 @@ function AboutSection() {
 
           <div
             className={clsx(styles.text, "animate", "slide-right")}
-            style={{ transitionDelay: "0.2s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             <p
               className={clsx(styles.lead, "animate", "fade-down")}
-              style={{ transitionDelay: "1s" }}
+              style={{ animationDelay: "1s" }}
             >
               هر غذای خوب می‌تواند شروع یک خاطره خوب باشد.
             </p>
