@@ -14,7 +14,7 @@ function HeroWritten() {
       <div className={styles.vituals}>
         <h1>
           رستوران‌های زنجیره‌ای
-          <span> گلبرگ</span>
+          <span> شیلا</span>
         </h1>
 
         <p>

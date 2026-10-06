@@ -7,7 +7,8 @@ function Footer() {
       <div className={clsx(styles.wrapper, "container")}>
         <p>طراح و پیاده ساز امین کاظمی</p>
         <span className={styles.golbarg}>
-          کلیه حقوق مادی و معنوی متعلق به رستوران زنجیره ای <span>گلبرگ</span> می باشد
+          کلیه حقوق مادی و معنوی متعلق به رستوران زنجیره ای <span>شیلا</span> می
+          باشد
         </span>
       </div>
     </footer>

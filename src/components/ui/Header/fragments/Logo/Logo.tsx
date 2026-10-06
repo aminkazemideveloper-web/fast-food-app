@@ -9,7 +9,7 @@ function Logo() {
   return (
     <div ref={containerRef} className={clsx(styles.logo)}>
       <Link to={"/"} className={styles.text}>
-        گلبرگ
+        شیلا
       </Link>
       <div className={clsx(styles["img-box"], "animate", "slide-right")}>
         <img className={styles.img} src={logo} alt="" />

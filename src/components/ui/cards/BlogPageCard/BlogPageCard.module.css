@@ -6,7 +6,7 @@
   gap: 0.3rem;
 
   .imageBox {
-    border: 1px solid
+    border: 3px solid
       color-mix(in srgb, var(--color-primary-contrast) 6%, transparent);
 
     box-shadow:
@@ -97,7 +97,7 @@
       border-color 0.3s ease,
       box-shadow 0.3s ease;
 
-    border: 1px solid
+    border: 3px solid
       color-mix(in srgb, var(--color-primary-contrast) 15%, transparent);
 
     background: color-mix(
@@ -181,15 +181,14 @@
   }
 
   &:hover {
-    /* transform: translateY(-7px); */
-
     .imageBox {
       border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 
       box-shadow: 0 18px 45px
         color-mix(in srgb, var(--color-primary) 12%, transparent);
 
-      transform: translateY(100%) translateX(-7%);
+      transform: translateY(30px) translateX(7%);
+
       &::after {
         opacity: 0.4;
       }
@@ -199,25 +198,20 @@
       }
       .readMore {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-25px) translateX(15px);
       }
     }
 
     .cardContent {
-      transform: translateX(0%) translateY(-100%);
+      transform: translateX(-6%) translateY(-5%);
       border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 
       box-shadow: 0 18px 45px
         color-mix(in srgb, var(--color-primary) 12%, transparent);
 
-      > P {
-        opacity: 0;
-        visibility: hidden;
-      }
       .cardLink {
-        transform: translateY(-40px);
         > span {
-          transform: translateX(-5px);
+          transform: translateX(5px);
         }
       }
     }

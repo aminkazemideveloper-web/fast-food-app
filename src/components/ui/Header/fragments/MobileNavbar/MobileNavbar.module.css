@@ -67,7 +67,11 @@
     padding-block: 1rem;
     padding-inline: 1rem;
 
-    background: color-mix(in srgb, var(--color-primary) 35%, transparent);
+    /* background: color-mix(
+      in srgb,
+      var(--color-primary) 5%,
+      var(--color-background) 90%
+    ); */
     border-radius: 2rem 2rem 0 0;
 
     .btn {
@@ -147,7 +151,11 @@
         }
 
         &.active {
-          color: color-mix(in srgb, var(--color-primary-fade) 80%, transparent);
+          color: color-mix(
+            in srgb,
+            var(--color-primary) 35%,
+            var(--color-primary-contrast) 90%
+          );
         }
 
         /* &.active {

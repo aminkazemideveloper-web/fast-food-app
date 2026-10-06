@@ -43,7 +43,7 @@ function Menus() {
   if (status === "error") return <ErrorPage />;
   return (
     <div ref={containerRef} className={clsx(styles.menus, "container")}>
-      <HeaderSection title="منو گلبرگ" />
+      <HeaderSection title="منو شیلا" />
       <div className={clsx(styles.wrapper, "animate", "slide-right")}>
         {categories?.map((item) => (
           <MenuCard key={item.id} menu={item} />

@@ -10,7 +10,12 @@
     text-wrap: nowrap;
     font-size: var(--font-size-500);
     font-weight: 500;
-    color: var(--color-primary);
+    color: color-mix(
+      in srgb,
+      var(--color-primary) 35%,
+      var(--color-primary-contrast) 90%
+    );
+    /* color: hsl(49, 56%, 70%); */
 
     filter: drop-shadow(
       0 0 15px color-mix(in srgb, var(--color-primary-light) 50%, transparent)
