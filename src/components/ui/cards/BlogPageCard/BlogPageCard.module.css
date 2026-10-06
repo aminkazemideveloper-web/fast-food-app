@@ -97,8 +97,6 @@
       border-color 0.3s ease,
       box-shadow 0.3s ease;
 
-    /* background-color: red; */
-
     border: 1px solid
       color-mix(in srgb, var(--color-primary-contrast) 15%, transparent);
 
@@ -146,7 +144,7 @@
       /* background-color: blue; */
       color: color-mix(in srgb, var(--color-primary-contrast) 62%, transparent);
 
-      font-size: var(--font-size-300);
+      font-size: var(--font-size-200);
 
       line-height: 2;
 
@@ -176,7 +174,7 @@
 
       > span {
         font-size: 1.2rem;
-
+        padding-inline-end: 1rem;
         transition: transform 0.25s ease;
       }
     }
@@ -249,6 +247,16 @@
       }
       > p {
         font-size: var(--font-size-300);
+      }
+      .cardLink {
+        .link {
+          padding-inline-end: 3rem;
+          > span {
+            svg {
+              padding: 4rem;
+            }
+          }
+        }
       }
     }
   }
