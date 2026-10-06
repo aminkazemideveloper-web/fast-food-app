@@ -3,13 +3,26 @@
   gap: 1.5rem;
 
   .wrapper {
-    display: flex;
+    /* display: flex;
     align-items: center;
     inline-size: 100%;
     justify-content: center;
     flex-wrap: wrap;
     margin-inline: auto;
+    gap: 0.5rem; */
+    display: grid;
+    inline-size: 100%;
+    margin-inline: auto;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
     gap: 0.5rem;
+    overflow-x: auto;
+    padding-block: 1rem;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: color-mix(in srgb, var(--color-primary) 60%, transparent)
+      color-mix(in srgb, var(--color-background) 30%, transparent);
   }
 }
 @media screen and (min-width: 548px) {
