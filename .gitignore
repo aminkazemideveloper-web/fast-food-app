@@ -36,4 +36,10 @@ sketch
 .history
 .ionide
 
+
+### Environment Variables ###
+.env
+.env.*
+!.env.example
+
 # End of https://www.toptal.com/developers/gitignore/api/react,visualstudiocode
