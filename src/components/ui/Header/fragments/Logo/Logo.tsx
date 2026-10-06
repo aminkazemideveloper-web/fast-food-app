@@ -7,15 +7,14 @@ import clsx from "clsx";
 function Logo() {
   const containerRef = useScrollAnimation();
   return (
-    <Link to={"/"} className={clsx(styles.logo)}>
-      <div className={styles.text}>گلبرگ</div>
-      <div
-        ref={containerRef}
-        className={clsx(styles["img-box"], "animate", "slide-right")}
-      >
+    <div ref={containerRef} className={clsx(styles.logo)}>
+      <Link to={"/"} className={styles.text}>
+        گلبرگ
+      </Link>
+      <div className={clsx(styles["img-box"], "animate", "slide-right")}>
         <img className={styles.img} src={logo} alt="" />
       </div>
-    </Link>
+    </div>
   );
 }
 

@@ -4,10 +4,10 @@ import { useGetAllBranches } from "../../services/hooks/branches/useGetAllBranch
 import ErrorPage from "../Error/Page";
 import styles from "./BranchPage.module.css";
 import { useDebounce } from "../../hooks/useDebounce";
+import BranchesSkeleton from "../../components/skeletons/BranchesSkeleton/BranchesSkeleton";
 
 function BranchPage() {
   const [search, setSearch] = useState("");
-
   const { text: debouncedSearch } = useDebounce(search, 500);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function BranchPage() {
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   if (status === "pending") {
-    return <div>در حال دریافت...</div>;
+    return <BranchesSkeleton />;
   }
 
   if (status === "error") {

@@ -1,0 +1,10 @@
+.navbar-skeleton {
+  inline-size: min(35rem, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-inline: auto;
+  position: relative;
+  top: 2rem;
+}

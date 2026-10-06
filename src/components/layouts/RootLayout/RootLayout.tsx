@@ -4,15 +4,13 @@ import Header from "../../ui/Header/Header";
 import Footer from "../../ui/Footer/Footer";
 import clsx from "clsx";
 
-import useScrollAnimation from "../../../hooks/useScrollAnimation";
 import NavigationBottom from "../../ui/NavigationBottom/NavigationBottom";
 import Navbar from "../../ui/Header/fragments/Navbar/Navbar";
 import ScrollToTop from "../../ui/ScrollToTop/ScrollToTop";
 
 function RootLayout() {
-  const containerRef = useScrollAnimation();
   return (
-    <div ref={containerRef} className={clsx(styles.layout)}>
+    <div className={clsx(styles.layout)}>
       <Header />
 
       <Navbar />

@@ -1,0 +1,21 @@
+.service-skeleton {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+  .header {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    align-items: center;
+    overflow: hidden;
+
+    > * {
+      flex: 0 0 6rem;
+    }
+  }
+}

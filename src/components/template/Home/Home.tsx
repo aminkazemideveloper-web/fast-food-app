@@ -12,9 +12,9 @@ function Home() {
   return (
     <div className={clsx(styles.home)}>
       <HeroSection />
+
       <Menus />
       <Banner />
-
       <VisualFood />
       <AboutSection />
       <VisualFood />

@@ -8,14 +8,13 @@ import MingcuteAlignJustifyLine from "../../../icons/MingcuteAlignJustifyLine";
 import MingcuteCloseLine from "../../../icons/MingcuteCloseLine";
 import MobileNavbar from "./fragments/MobileNavbar/MobileNavbar";
 import { useGetAllCategories } from "../../../services/hooks/category/useGetAllCategories";
-import useScrollAnimation from "../../../hooks/useScrollAnimation";
 import { useSidebareStore } from "../../../stores/sidebar-store";
 
 import ErrorPage from "../../../pages/Error/Page";
+import HeaderSkeleton from "../../skeletons/HeaderSkeleton/HeaderSkeleton";
 
 function Header() {
   const { data: categories, status } = useGetAllCategories();
-  const containerRef = useScrollAnimation();
 
   const isOpen = useSidebareStore((state) => state.isOpen);
 
@@ -25,12 +24,11 @@ function Header() {
     toggleOpen();
   };
 
-  if (status === "pending") return <div>is pending ...</div>;
+  if (status === "pending") return <HeaderSkeleton />;
   if (status === "error") return <ErrorPage />;
 
-  return (
-    <div id="topToScroll">
-      <header ref={containerRef} className={clsx(styles.header, "container")}>
+  return  <div id="topToScroll">
+      <header className={clsx(styles.header, "container")}>
         <IconButton className={styles.icons} onClick={handleToggleButtonClick}>
           {isOpen === "open" ? (
             <MingcuteCloseLine />
@@ -43,8 +41,7 @@ function Header() {
       </header>
 
       {isOpen && <MobileNavbar categories={categories!} />}
-    </div>
-  );
+    </div>;
 }
 
 export default Header;

@@ -1,0 +1,18 @@
+.header-skeleton {
+  margin-block-start: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+  border-radius: 999rem;
+  inline-size: 90%;
+  margin-inline: auto;
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary-contrast) 10%, transparent);
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-contrast) 10%,
+    var(--color-background) 20%
+  );
+  overflow: hidden;
+}

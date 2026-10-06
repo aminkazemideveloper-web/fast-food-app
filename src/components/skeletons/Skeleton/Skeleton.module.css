@@ -3,8 +3,8 @@
 
   background-color: color-mix(
     in srgb,
-    var(--color-background) 70%,
-    var(--color-primary-contrast) 80%
+    var(--color-background) 30%,
+    var(--color-primary-contrast) 10%
   );
   overflow: hidden;
 
@@ -13,18 +13,19 @@
     display: block;
     position: absolute;
     height: calc(100% + 10rem);
-    inline-size: 5px;
+    inline-size: 2px;
     background: linear-gradient(
       to right,
-      var(--color-primary-contrast),
+      color-mix(in srgb, var(--color-primary-contrast) 10%, transparent),
       transparent,
-      var(--color-primary-contrast)
+      color-mix(in srgb, var(--color-primary-contrast) 10%, transparent)
     );
-    transform: translateX(-40%) rotate(20deg);
+    transform: translateX(-40%) rotate(25deg);
     top: -40px;
     left: -40%;
-
-    animation: effect 1s infinite linear;
+    box-shadow: 0 0 15px
+      color-mix(in srgb, var(--color-primary-contrast) 20%, transparent);
+    animation: effect 0.8s infinite linear;
   }
 
   &.rounded {
@@ -35,7 +36,7 @@
     border-radius: 999rem;
   }
 
-  .card {
+  &.card {
     box-shadow: var(--shadow--normal);
     border-radius: 1rem;
   }

@@ -15,11 +15,9 @@ type Props = {
 function Branch({ branches, search, onSearch, loading }: Props) {
   return (
     <div className={clsx(styles.branches, "container")}>
-
       <div className={styles.toolbar}>
-
-      <HeaderSection title="تمام شعبه های ما" sub="در تهران و استان البررز" />
-      <SearchInput value={search} onSearch={onSearch} loading={loading} />
+        <HeaderSection title="تمام شعبه های ما" sub="در تهران و استان البررز" />
+        <SearchInput value={search} onSearch={onSearch} loading={loading} />
       </div>
 
       <div className={styles.wrapper}>

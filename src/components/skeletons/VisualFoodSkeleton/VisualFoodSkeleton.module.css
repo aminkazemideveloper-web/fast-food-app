@@ -1,0 +1,17 @@
+.contain {
+  display: grid;
+  gap: 2rem;
+
+  .header {
+    display: grid;
+    gap: 0.5rem;
+    align-items: start;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import ProductCard from "../../../../ui/cards/ProductCard/ProductCard";
 import SwipperActions from "./components/SwipperActions/SwipperActions";
 import { useEffect, useRef } from "react";
+import VisualFoodSkeleton from "../../../../skeletons/VisualFoodSkeleton/VisualFoodSkeleton";
 
 function VisualFood() {
   const { data, status } = useGetProducts();
@@ -47,7 +48,7 @@ function VisualFood() {
     return () => observer.disconnect();
   }, [status]);
 
-  if (status === "pending") return <div>loading ...</div>;
+  if (status === "pending") return <VisualFoodSkeleton />;
   if (status === "error") return <ErrorPage />;
 
   return (

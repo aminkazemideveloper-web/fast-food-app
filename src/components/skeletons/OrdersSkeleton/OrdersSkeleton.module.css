@@ -1,0 +1,43 @@
+.order-skeleton {
+  inline-size: 100%;
+  margin-block-start: 5rem;
+  display: grid;
+  gap: 3rem;
+  overflow: hidden;
+
+  .categories {
+    display: flex;
+    padding-inline: 1rem;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+    .card {
+      flex: 0 0 7rem;
+      display: grid;
+      gap: 0.6rem;
+      justify-items: center;
+    }
+  }
+
+  .content {
+    inline-size: 100%;
+    display: grid;
+    gap: 2rem;
+
+    .header {
+      display: grid;
+      gap: 0.7rem;
+      align-items: start;
+    }
+
+    .wrapper {
+      inline-size: 100%;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 13rem));
+      justify-content: center;
+    }
+  }
+}

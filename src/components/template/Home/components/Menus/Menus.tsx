@@ -7,6 +7,7 @@ import MenuCard from "../../../../ui/cards/MenuCard/MenuCard";
 import { useCategoriesProducts } from "../../../../../services/hooks/products/useCategoriesProducts";
 
 import { useEffect, useRef } from "react";
+import MenusSkeleton from "../../../../skeletons/MenusSkeleton/MenusSkeleton";
 
 function Menus() {
   const { data: categories, status } = useCategoriesProducts();
@@ -38,7 +39,7 @@ function Menus() {
     return () => observer.disconnect();
   }, [status]);
 
-  if (status === "pending") return <div>loading ...</div>;
+  if (status === "pending") return <MenusSkeleton />;
   if (status === "error") return <ErrorPage />;
   return (
     <div ref={containerRef} className={clsx(styles.menus, "container")}>

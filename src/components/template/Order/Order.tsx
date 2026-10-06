@@ -17,9 +17,10 @@ import { useFoodStore } from "../../../stores/food-store";
 type Props = {
   products: ProductType[];
   categories: CategoryProductsType[];
+  loading: boolean;
 };
 
-function Order({ products, categories }: Props) {
+function Order({ products, categories, loading }: Props) {
   const location = useLocation();
   const openCart = useFoodStore((state) => state.isOpen);
   const toggleCart = useFoodStore((state) => state.toggleOpen);
@@ -50,7 +51,7 @@ function Order({ products, categories }: Props) {
 
   return (
     <div className={clsx(styles.orders, "container")}>
-      <Categories categories={categories} />
+      {loading ? <div>loading...</div> : <Categories categories={categories} />}
       {isShowCategory && (
         <SubCategories categories={categories} isShow={isShowCategory} />
       )}
