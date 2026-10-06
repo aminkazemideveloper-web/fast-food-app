@@ -1,14 +1,13 @@
 import clsx from "clsx";
 
 import styles from "./Banner.module.css";
-import { useEffect, useRef } from "react";
-import { useGetAllBanners } from "../../../../../services/hooks/banner/useGetAllBanners";
+
 import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 import BannerCard from "../../../../ui/cards/BannerCard/BannerCard";
 import ErrorPage from "../../../../../pages/Error/Page";
+import { useEffect, useRef } from "react";
 
 function Banner() {
-  const { data, status } = useGetAllBanners();
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ function Banner() {
           }
         });
       },
-      { threshold: 0.2 },
+      { threshold: 0.1 },
     );
 
     const elements = container.querySelectorAll(".animate");
@@ -34,7 +33,7 @@ function Banner() {
     });
 
     return () => observer.disconnect();
-  }, [data?.length]);
+  }, []);
 
   if (status === "pending") return <div>is pending ...</div>;
   if (status === "error") return <ErrorPage />;
@@ -44,19 +43,15 @@ function Banner() {
       <HeaderSection title="پیشنهادهای ویژه" />
 
       <div ref={containerRef} className={styles.content}>
-        {data?.map((banner, index) => {
-          return (
-            <div
-              key={banner.id}
-              className={clsx("animate", "slide-right")}
-              style={{
-                transitionDelay: `${index * 150}ms`,
-              }}
-            >
-              <BannerCard banner={banner} />
-            </div>
-          );
-        })}
+        <div className={clsx(styles.img1, "animate", "slide-right")}>
+          <BannerCard img="./../../../../../../src/assets/images/banner/banner-1.jpg" />
+        </div>
+        <div className={clsx(styles.img2, "animate", "fade-down")}>
+          <BannerCard img="./../../../../../../src/assets/images/banner/banner-2.jpg" />
+        </div>
+        <div className={clsx(styles.img2, "animate", "fade-up")}>
+          <BannerCard img="./../../../../../../src/assets/images/banner/banner-3.jpg" />
+        </div>
       </div>
     </div>
   );
