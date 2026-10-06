@@ -1,16 +1,26 @@
+import { Link } from "react-router";
+import MingcuteArrowLeftFill from "../../../../../icons/MingcuteArrowLeftFill";
 import styles from "./AboutSection.module.css";
+import clsx from "clsx";
+import useScrollAnimation from "../../../../../hooks/useScrollAnimation";
 
 function AboutSection() {
+  const containerRef = useScrollAnimation();
   return (
-    <section className={styles.about}>
-      <div className={styles.container}>
+    <section ref={containerRef} className={styles.about}>
+      <div
+        className={clsx(styles.wrapper, "container", "animate", "slide-left")}
+      >
         <div className={styles.top}>
           <span className={styles.eyebrow}>SHILA STORY</span>
           <span className={styles.number}>01</span>
         </div>
 
         <div className={styles.content}>
-          <div className={styles.title}>
+          <div
+            className={clsx(styles.title, "animate", "fade-up")}
+            style={{ transitionDelay: "0.1s" }}
+          >
             <h2>
               چیزی بیشتر از
               <br />
@@ -18,20 +28,28 @@ function AboutSection() {
             </h2>
           </div>
 
-          <div className={styles.text}>
-            <p className={styles.lead}>
+          <div
+            className={clsx(styles.text, "animate", "slide-right")}
+            style={{ transitionDelay: "0.2s" }}
+          >
+            <p
+              className={clsx(styles.lead, "animate", "fade-down")}
+              style={{ transitionDelay: "1s" }}
+            >
               هر غذای خوب می‌تواند شروع یک خاطره خوب باشد.
             </p>
 
-            <p>
+            <span>
               در شیلا، کیفیت مواد اولیه و توجه به جزئیات را کنار هم گذاشته‌ایم
               تا هر بار تجربه‌ای خوشمزه و متفاوت داشته باشید.
-            </p>
+            </span>
 
-            <a href="/about" className={styles.link}>
+            <Link to="/shopSotry" className={styles.link}>
               داستان شیلا
-              <strong>←</strong>
-            </a>
+              <strong>
+                <MingcuteArrowLeftFill />
+              </strong>
+            </Link>
           </div>
         </div>
 
