@@ -1,0 +1,120 @@
+.blog {
+  .header {
+    max-inline-size: 750px;
+    margin-inline: auto;
+    margin-block-end: 3rem;
+    text-align: center;
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0.45rem 1rem;
+      margin-block-end: 1rem;
+
+      border: 1px solid
+        color-mix(in srgb, var(--color-primary) 40%, transparent);
+
+      border-radius: 999px;
+
+      background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+
+      color: var(--color-primary);
+
+      font-size: var(--font-size-300);
+      font-weight: 700;
+    }
+
+    > h1 {
+      margin: 0;
+      color: var(--color-primary-contrast);
+
+      font-size: var(--font-size-800);
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    p {
+      margin: 1rem 0 0;
+
+      color: color-mix(in srgb, var(--color-primary-contrast) 65%, transparent);
+
+      font-size: var(--font-size-400);
+      line-height: 2;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .blog {
+    .header {
+      > h1 {
+        font-size: var(--font-size-700);
+      }
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .blog {
+    .header {
+      margin-block-end: 2rem;
+      > h1 {
+        font-size: var(--font-size-600);
+        line-height: 1.7;
+      }
+      > p {
+        font-size: var(--font-size-300);
+        line-height: 1.9;
+      }
+    }
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+
+  .imageBox {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardContent h2 {
+    font-size: var(--font-size-400);
+  }
+
+  .cardContent p {
+    font-size: var(--font-size-300);
+  }
+
+  /* روی موبایل hover نداریم */
+  .readMore {
+    display: none;
+  }
+}
