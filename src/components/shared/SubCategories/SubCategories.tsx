@@ -10,7 +10,7 @@ type Props = {
 
 function SubCategories({ categories, isShow }: Props) {
   return (
-    <div
+    <section
       className={clsx(
         styles["sub-categories"],
         isShow ? styles.show : styles.hide,
@@ -28,7 +28,7 @@ function SubCategories({ categories, isShow }: Props) {
           <strong className={styles.title}>{category.title}</strong>
         </Link>
       ))}
-    </div>
+    </section>
   );
 }
 

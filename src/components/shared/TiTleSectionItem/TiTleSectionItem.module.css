@@ -8,9 +8,10 @@
   font-size: var(--font-size-400);
 
   .title {
-    font-size: 1em;
+    font-size: 0.9em;
     color: var(--color-primary-contrast);
     font-weight: 400;
+    white-space: nowrap;
   }
   .sub {
     font-size: 0.7em;

@@ -1,25 +1,20 @@
 import clsx from "clsx";
 import styles from "./Cart.module.css";
 import CartItemCard from "../../ui/cards/CartItemCard/CartItemCard";
-import { useFoodStore } from "../../../stores/food-store";
 import IconButton from "../../shared/IconButton/IconButton";
 import MingcuteCloseLine from "../../../icons/MingcuteCloseLine";
 import MingcuteShoppingBag2Line from "../../../icons/MingcuteShoppingBag2Line";
+import { useCart } from "./useCart";
 
 function Cart() {
-  const carts = useFoodStore((state) => state.cart);
-  const toggleCart = useFoodStore((state) => state.toggleOpen);
-
-  const totalPrice = carts.reduce(
-    (total, item) => total + item.qty * item.price,
-    0,
-  );
-
-  const tax = totalPrice * (1 - 0.9);
-
-  const handleToggleCartButtonClick = () => {
-    toggleCart();
-  };
+  const {
+    handleToggleCartButtonClick,
+    tax,
+    totalPrice,
+    carts,
+    handledecreaseQty,
+    handleincreaseQty,
+  } = useCart();
 
   return (
     <div className={clsx(styles.cart)}>
@@ -41,7 +36,14 @@ function Cart() {
           {carts.length === 0 ? (
             <div className={styles.emptyCart}>سبد شما خالی میباشد</div>
           ) : (
-            carts.map((cart) => <CartItemCard key={cart.id} item={cart} />)
+            carts.map((cart) => (
+              <CartItemCard
+                key={cart.id}
+                item={cart}
+                increase={handleincreaseQty}
+                decrease={handledecreaseQty}
+              />
+            ))
           )}
         </div>
 

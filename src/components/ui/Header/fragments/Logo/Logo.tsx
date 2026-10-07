@@ -5,7 +5,7 @@ import useScrollAnimation from "../../../../../hooks/useScrollAnimation";
 import clsx from "clsx";
 
 function Logo() {
-  const containerRef = useScrollAnimation();
+  const containerRef = useScrollAnimation({ status: "success" });
   return (
     <div ref={containerRef} className={clsx(styles.logo)}>
       <Link to={"/"} className={styles.text}>

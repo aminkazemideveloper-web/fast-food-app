@@ -6,84 +6,47 @@ import type { CategoryProductsType } from "../../../types/category-product-type"
 import Categories from "./components/Categories/Categories";
 import HeaderSection from "../../shared/HeaderSection/HeaderSection";
 import ProductCard from "../../ui/cards/ProductCard/ProductCard";
-import { useLocation } from "react-router";
-import { useEffect, useState } from "react";
 
 import SubCategories from "../../shared/SubCategories/SubCategories";
 import Cart from "../Cart/Cart";
 import Overlay from "../../shared/Overlay/Overlay";
-import { useFoodStore } from "../../../stores/food-store";
+
+import { useOrder } from "./useOrder";
 
 type Props = {
   products: ProductType[];
   categories: CategoryProductsType[];
-  loading: boolean;
 };
 
-function Order({ products, categories, loading }: Props) {
-  const location = useLocation();
-  const openCart = useFoodStore((state) => state.isOpen);
-  const toggleCart = useFoodStore((state) => state.toggleOpen);
-  const [isShowCategory, setIsShowCategory] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsShowCategory(window.scrollY >= 250);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const hashes = location.hash;
-    if (!hashes) return;
-
-    const element = document.querySelector(hashes);
-
-    element?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }, [location]);
+function Order({ products, categories }: Props) {
+  const { categoriesWithProducts, isShowCategory, openCart, toggleCart } =
+    useOrder({ products, categories });
 
   return (
     <div className={clsx(styles.orders, "container")}>
-      {loading ? <div>loading...</div> : <Categories categories={categories} />}
+      <Categories categories={categories} />
       {isShowCategory && (
         <SubCategories categories={categories} isShow={isShowCategory} />
       )}
 
-      {categories?.map((category) => {
-        const productsByCategory = products.filter(
-          (product) => Number(product.categoryId) === Number(category.id),
-        );
+      {categoriesWithProducts.map(({ category, products }) => (
+        <section
+          className={clsx(styles.order, "container")}
+          id={category.slug}
+          key={category.id}
+        >
+          <HeaderSection
+            title={category.title}
+            sub={`${products.length} مورد`}
+          />
 
-        if (productsByCategory.length === 0) {
-          return null;
-        }
-
-        return (
-          <section
-            className={clsx(styles.order, "container")}
-            id={category.slug}
-            key={category.id}
-          >
-            <HeaderSection
-              title={category.title}
-              sub={`${productsByCategory.length} مورد`}
-            />
-
-            <div className={styles["products-wrapper"]}>
-              {productsByCategory.map((product) => (
-                <ProductCard product={product} key={product.id} />
-              ))}
-            </div>
-          </section>
-        );
-      })}
+          <div className={styles["products-wrapper"]}>
+            {products.map((product) => (
+              <ProductCard product={product} key={product.id} />
+            ))}
+          </div>
+        </section>
+      ))}
 
       {openCart && (
         <div>

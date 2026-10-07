@@ -5,7 +5,7 @@ import clsx from "clsx";
 import useScrollAnimation from "../../../../../hooks/useScrollAnimation";
 
 function AboutSection() {
-  const containerRef = useScrollAnimation();
+  const containerRef = useScrollAnimation({ status: "success" });
   return (
     <section ref={containerRef} className={styles.about}>
       <div

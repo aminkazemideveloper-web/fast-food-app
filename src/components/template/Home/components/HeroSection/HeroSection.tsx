@@ -7,7 +7,7 @@ import HeroWritten from "./components/HeroWritten/HeroWritten";
 import HeroImages from "./components/HeroImages/HeroImages";
 
 function HeroSection() {
-  const containerRef = useScrollAnimation();
+  const containerRef = useScrollAnimation({ status: "success" });
 
   return (
     <section ref={containerRef} className={styles.hero}>

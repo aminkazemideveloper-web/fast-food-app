@@ -5,26 +5,18 @@ import TiTleSectionItem from "../../../shared/TiTleSectionItem/TiTleSectionItem"
 
 import MingcuteDelete2Line from "../../../../icons/MingcuteDelete2Line";
 import type { CartItem } from "../../../../types/cart-item-type";
-import { useFoodStore } from "../../../../stores/food-store";
+
 import MingcuteAddFill from "../../../../icons/MingcuteAddFill";
 
 import MingcuteMinimizeFill from "../../../../icons/MingcuteMinimizeFill";
 
 type Props = {
   item: CartItem;
+  decrease: (id: string) => void;
+  increase: (id: string) => void;
 };
 
-function CartItemCard({ item }: Props) {
-  const decreaseQty = useFoodStore((state) => state.decreaseQty);
-  const increaseQty = useFoodStore((state) => state.increaseQty);
-
-  const handleDecreaseQty = (id: string) => {
-    decreaseQty(id);
-  };
-  const handleIncreaseQty = (id: string) => {
-    increaseQty(id);
-  };
-
+function CartItemCard({ item, decrease, increase }: Props) {
   return (
     <div className={clsx(styles["cart-item"], "action")}>
       <div className={styles.profile}>
@@ -36,14 +28,14 @@ function CartItemCard({ item }: Props) {
       <div className={styles.actions}>
         <IconButton
           className={clsx(styles.info, "action")}
-          onClick={() => handleIncreaseQty(item.id)}
+          onClick={() => increase(item.id)}
         >
           <MingcuteAddFill />
         </IconButton>
         <span className={styles.qty}>{item.qty}</span>
         <IconButton
           className={clsx(styles.remove, "action")}
-          onClick={() => handleDecreaseQty(item.id)}
+          onClick={() => decrease(item.id)}
         >
           {item.qty > 1 ? <MingcuteMinimizeFill /> : <MingcuteDelete2Line />}
         </IconButton>

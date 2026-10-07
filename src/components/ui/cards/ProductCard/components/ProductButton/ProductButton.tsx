@@ -12,7 +12,7 @@ type Props = {
 
 function ProductButton({ onAdd, product }: Props) {
   const [isLoading, setIsLoading] = useState(false);
-  const handleClick = () => {
+  const handleLoadingClick = () => {
     onAdd(product);
     setIsLoading(true);
     setTimeout(() => {
@@ -21,7 +21,7 @@ function ProductButton({ onAdd, product }: Props) {
   };
   return (
     <button
-      onClick={handleClick}
+      onClick={handleLoadingClick}
       disabled={isLoading}
       className={clsx(styles.btn, "action", isLoading && styles.loading)}
     >

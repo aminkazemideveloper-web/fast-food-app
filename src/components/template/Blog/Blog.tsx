@@ -1,4 +1,3 @@
-
 import type { BlogType } from "../../../types/blog-type";
 import styles from "./Blog.module.css";
 import clsx from "clsx";
@@ -10,7 +9,6 @@ type Props = {
 function Blog({ blogs: blogData }: Props) {
   return (
     <div className={clsx(styles.blog, "container")}>
-      {/* Header */}
       <header className={styles.header}>
         <span className={styles.badge}>وبلاگ شیلا</span>
 
@@ -24,7 +22,7 @@ function Blog({ blogs: blogData }: Props) {
       {/* Blog Grid */}
       <section className={styles.grid}>
         {blogData.map((blog) => (
-          <BlogPageCard blog={blog} />
+          <BlogPageCard key={blog.id} blog={blog} />
         ))}
       </section>
     </div>

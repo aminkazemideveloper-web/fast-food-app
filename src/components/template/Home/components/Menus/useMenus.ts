@@ -1,14 +1,16 @@
 import { useEffect, useRef } from "react";
+import { useCategoriesProducts } from "../../../../../services/hooks/products/useCategoriesProducts";
 
-type Props = {
-  status?: string;
-};
-function useScrollAnimation({ status = "success"}: Props) {
+export const useMenus = () => {
+  const { data: categories, status } = useCategoriesProducts();
+
+  const loading = status === "pending";
+  const error = status === "error";
+  const success = status === "success";
+
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (status !== "success") return;
-
     const container = containerRef.current;
 
     if (!container) return;
@@ -22,21 +24,21 @@ function useScrollAnimation({ status = "success"}: Props) {
           }
         });
       },
-      {
-        threshold: 0.1,
-      },
+      { threshold: 0.2 },
     );
 
     const elements = container.querySelectorAll(".animate");
-
     elements.forEach((element) => {
       observer.observe(element);
     });
 
     return () => observer.disconnect();
-  }, [status]);
+  }, [success]);
 
-  return containerRef;
-}
-
-export default useScrollAnimation;
+  return {
+    categories,
+    error,
+    loading,
+    containerRef,
+  };
+};

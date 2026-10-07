@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  inline-size: min(30rem, 70% - 1rem);
+  inline-size: min(30rem, 90%);
 
-  padding: 1rem;
+  padding: 1rem 0.3rem;
   min-block-size: 100vh;
   min-block-size: 100dvh;
 

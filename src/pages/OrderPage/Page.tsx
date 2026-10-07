@@ -1,30 +1,27 @@
-import { useEffect } from "react";
 import Order from "../../components/template/Order/Order";
-import { useCategoriesProducts } from "../../services/hooks/products/useCategoriesProducts";
-import { useGetProducts } from "../../services/hooks/products/useGetProducts";
+
 import styles from "./OrderPage.module.css";
+
 import ErrorPage from "../Error/Page";
 import OrdersSkeleton from "../../components/skeletons/OrdersSkeleton/OrdersSkeleton";
 
+import { useOrderPage } from "./useOrderPage";
+
 function OrderPage() {
-  const { data: products, status: statusProduct } = useGetProducts();
-  const { data: categories, status, isPending } = useCategoriesProducts();
+  const { categories, isError, isLoading, products } = useOrderPage();
 
-  useEffect(() => {
-    document.title = "سفارشات";
-  }, []);
-
-  if (statusProduct === "pending" && status === "pending")
+  if (isLoading) {
     return <OrdersSkeleton />;
-  if (statusProduct === "error" && status === "error") return <ErrorPage />;
+  }
+
+  if (isError) {
+    return <ErrorPage />;
+  }
 
   return (
     <div className={styles.order}>
-      <Order
-        products={products!}
-        categories={categories!}
-        loading={isPending}
-      />
+      <title>سفارشات</title>
+      <Order products={products} categories={categories} />
     </div>
   );
 }

@@ -11,15 +11,8 @@ import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddL
 import MingcuteUserQuestionFill from "../../../icons/MingcuteUserQuestionFill";
 import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
 
-// import MingcuteHome3Line from "../../../../icons/MingcuteHome3Line";
-// import MingcuteChartBarLine from "../../../../icons/MingcuteChartBarLine";
-// import MingcuteNewdotLine from "../../../../icons/MingcuteNewdotLine";
-// import MingcuteCalendarTimeAddLine from "../../../../icons/MingcuteCalendarTimeAddLine";
-// import MingcuteUserQuestionFill from "../../../../icons/MingcuteUserQuestionFill";
-// import MingcutePencil3AiLine from "../../../../icons/MingcutePencil3AiLine";
-
 function NavigationBottom() {
-  const containerRef = useScrollAnimation();
+  const containerRef = useScrollAnimation({ status: "success" });
 
   const iconMap = {
     MingcuteHome3Line,

@@ -5,22 +5,19 @@ import type { ProductType } from "../../../../types/product-type";
 import ProductButton from "./components/ProductButton/ProductButton";
 import ProductImage from "./components/ProductImage/ProductImage";
 import ProductVituals from "./components/ProductVituals/ProductVituals";
-import { useState } from "react";
-import { useFoodStore } from "../../../../stores/food-store";
+
+import { useProductCard } from "./useProductCard";
 
 type Props = {
   product: ProductType;
 };
 function ProductCard({ product }: Props) {
-  const [isHover, setIsHover] = useState(false);
-
-  
-  const addToCart = useFoodStore((state) => state.addToCart);
+  const { addToCart, isHover, exitCard, overCard } = useProductCard();
 
   return (
     <article
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={() => overCard()}
+      onMouseLeave={() => exitCard()}
       className={clsx(styles.product, "card")}
     >
       <div className={styles["img-box"]}>

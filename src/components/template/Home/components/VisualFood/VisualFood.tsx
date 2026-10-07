@@ -1,55 +1,19 @@
 import clsx from "clsx";
 import HeaderSection from "../../../../shared/HeaderSection/HeaderSection";
 import styles from "./VisualFood.module.css";
-import { useGetProducts } from "../../../../../services/hooks/products/useGetProducts";
 import ErrorPage from "../../../../../pages/Error/Page";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import { Pagination } from "swiper/modules";
 import ProductCard from "../../../../ui/cards/ProductCard/ProductCard";
 import SwipperActions from "./components/SwipperActions/SwipperActions";
-import { useEffect, useRef } from "react";
 import VisualFoodSkeleton from "../../../../skeletons/VisualFoodSkeleton/VisualFoodSkeleton";
+import { useVisualFood } from "./useVisualFood";
 
 function VisualFood() {
-  const { data, status } = useGetProducts();
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    if (!container) return;
-    console.log("servise container", container);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    const elements = container.querySelectorAll(".animate");
-    console.log("elements", elements);
-
-    elements.forEach((element) => {
-      console.log("elem", element);
-      observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, [status]);
-
-  if (status === "pending") return <VisualFoodSkeleton />;
-  if (status === "error") return <ErrorPage />;
+  const { containerRef, error, pending, products } = useVisualFood();
+  if (pending) return <VisualFoodSkeleton />;
+  if (error) return <ErrorPage />;
 
   return (
     <div
@@ -96,7 +60,7 @@ function VisualFood() {
               },
             }}
           >
-            {data.slice(0, 8).map((product) => (
+            {products?.slice(0, 8).map((product) => (
               <SwiperSlide key={product.id}>
                 <ProductCard product={product} />
               </SwiperSlide>
