@@ -9,19 +9,40 @@
 
 /* Back button */
 
-.back {
-  justify-self: start;
-
-  display: inline-flex;
+.breadcrumb {
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding-inline-start: 1rem;
 
-  color: var(--color-primary-contrast);
-  font-size: var(--font-size-300);
+  > a {
+    font-size: var(--font-size-300);
+    font-weight: 400;
+    color: var(--color-primary-contrast);
+    transition: color 0.25s ease;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
 
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
+  > b {
+    color: color-mix(
+      in srgb,
+      var(--color-backdrup) 95%,
+      var(--color-primary-contrast) 50%
+    );
+    transform: rotate(10deg);
+  }
+
+  > p {
+    font-size: var(--font-size-400);
+    font-weight: 700;
+    color: color-mix(
+      in srgb,
+      var(--color-primary) 35%,
+      var(--color-primary-contrast) 90%
+    );
+  }
 }
 
 .back:hover {

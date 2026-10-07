@@ -10,10 +10,6 @@ function BranchPage() {
   const [search, setSearch] = useState("");
   const { text: debouncedSearch } = useDebounce(search, 500);
 
-  useEffect(() => {
-    document.title = "شعبه ها";
-  }, []);
-
   const {
     data,
     fetchNextPage,
@@ -66,6 +62,7 @@ function BranchPage() {
 
   return (
     <div className={styles.branchs}>
+      <title>شعبه ها</title>
       <Branch
         branches={branches}
         search={search}

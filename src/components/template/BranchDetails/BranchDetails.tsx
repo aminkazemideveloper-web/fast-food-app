@@ -10,45 +10,53 @@ type Props = {
 
 function BranchDetails({ branch }: Props) {
   return (
-    <main className={clsx(styles["branch-details"], "container")}>
-      <Link className={styles.back} to="/branches">
-        ← بازگشت به شعب
-      </Link>
+    <>
+      <title>{`شعبه ${branch.region}`}</title>
+      <main className={clsx(styles["branch-details"], "container")}>
+        <div className={styles.breadcrumb}>
+          <Link to="/home">خانه</Link>
+          <b>|</b>
+          <Link to="/branches">شعبه ها</Link>
 
-      <section className={styles.card}>
-        <div className={styles["image-box"]}>
-          <img src={branch.img} alt={branch.region} />
+          <b>|</b>
+          <p>{branch.region}</p>
         </div>
 
-        <div className={styles.content}>
-          <span className={styles.label}>شعبه گلبرگ</span>
-
-          <h1>{branch.region}</h1>
-
-          <div className={styles.info}>
-            <div>
-              <span>آدرس</span>
-              <p>{branch.address}</p>
-            </div>
-
-            <div>
-              <span>شماره تماس</span>
-              <a href={`tel:${branch.tell}`}>{branch.tell}</a>
-            </div>
+        <section className={styles.card}>
+          <div className={styles["image-box"]}>
+            <img src={branch.img} alt={branch.region} />
           </div>
 
-          <div className={styles.actions}>
-            <a className="action" href={`tel:${branch.tell}`}>
-              تماس با شعبه
-            </a>
+          <div className={styles.content}>
+            <span className={styles.label}>شعبه گلبرگ</span>
 
-            <Link className="action" to="/order">
-              سفارش آنلاین
-            </Link>
+            <h1>{branch.region}</h1>
+
+            <div className={styles.info}>
+              <div>
+                <span>آدرس</span>
+                <p>{branch.address}</p>
+              </div>
+
+              <div>
+                <span>شماره تماس</span>
+                <a href={`tel:${branch.tell}`}>{branch.tell}</a>
+              </div>
+            </div>
+
+            <div className={styles.actions}>
+              <a className="action" href={`tel:${branch.tell}`}>
+                تماس با شعبه
+              </a>
+
+              <Link className="action" to="/order">
+                سفارش آنلاین
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }
 

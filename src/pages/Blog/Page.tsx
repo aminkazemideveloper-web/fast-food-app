@@ -1,4 +1,3 @@
-
 import styles from "./BlogPage.module.css";
 
 import { useComposition } from "../../components/template/Home/components/BlogSection/useCopmosition";
@@ -8,9 +7,12 @@ function BlogPage() {
   const { blogData } = useComposition();
 
   return (
-    <main className={styles.blogPage}>
-      <Blog blogs={blogData} />
-    </main>
+    <>
+      <title>وبلاگ</title>
+      <main className={styles.blogPage}>
+        <Blog blogs={blogData} />
+      </main>
+    </>
   );
 }
 

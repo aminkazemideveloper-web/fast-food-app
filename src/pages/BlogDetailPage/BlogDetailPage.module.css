@@ -1,0 +1,12 @@
+.notFound {
+  .notFoundContent {
+    display: grid;
+    /* grid-template-rows: 1fr auto; */
+    min-block-size: 100vh;
+    align-items: start;
+
+    .backLink {
+      justify-self: center;
+    }
+  }
+}
