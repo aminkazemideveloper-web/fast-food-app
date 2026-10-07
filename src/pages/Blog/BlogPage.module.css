@@ -20,10 +20,6 @@
 
 
 
-/* =========================
-   Tablet
-========================= */
-
 @media (max-width: 900px) {
   .blogPage {
     padding-block: 3rem 4rem;

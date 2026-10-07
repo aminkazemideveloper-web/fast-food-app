@@ -142,7 +142,11 @@
       min-block-size: 50px;
       padding-inline-start: 1rem;
       /* background-color: blue; */
-      color: color-mix(in srgb, var(--color-primary-contrast) 62%, transparent);
+      color: color-mix(
+        in srgb,
+        var(--color-primary) 1%,
+        var(--color-primary-contrast) 95%
+      );
 
       font-size: var(--font-size-200);
 
@@ -165,7 +169,11 @@
       border-block-start: 1px solid
         color-mix(in srgb, var(--color-primary-contrast) 10%, transparent);
 
-      color: var(--color-primary);
+      color: color-mix(
+        in srgb,
+        var(--color-primary) 35%,
+        var(--color-primary-contrast) 90%
+      );
 
       text-decoration: none;
 

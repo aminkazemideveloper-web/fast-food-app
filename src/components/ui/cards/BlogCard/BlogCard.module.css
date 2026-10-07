@@ -50,8 +50,8 @@
       > span {
         color: color-mix(
           in srgb,
-          var(--color-primary) 40%,
-          var(--color-primary-contrast) 30%
+          var(--color-primary) 35%,
+          var(--color-primary-contrast) 90%
         );
         font-size: var(--font-size-400);
         font-weight: 600;
@@ -89,10 +89,10 @@
             font-size: var(--font-size-300);
             font-weight: 300;
             color: color-mix(
-              in srgb,
-              var(--color-primary-contrast) 60%,
-              transparent
-            );
+      in srgb,
+      var(--color-primary) 35%,
+      var(--color-primary-contrast) 90%
+    );
           }
 
           > p {
@@ -104,8 +104,8 @@
             overflow-wrap: anywhere;
             color: color-mix(
               in srgb,
-              var(--color-primary) 80%,
-              var(--color-primary-contrast) 10%
+              var(--color-primary) 90%,
+              var(--color-primary-contrast) 5%
             );
           }
         }

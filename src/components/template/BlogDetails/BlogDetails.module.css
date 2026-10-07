@@ -29,7 +29,11 @@
 }
 
 .breadcrumb span:last-child {
-  color: color-mix(in srgb, var(--color-primary-fade) 60%, transparent);
+  color: color-mix(
+    in srgb,
+    var(--color-primary) 35%,
+    var(--color-primary-contrast) 90%
+  );
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -106,7 +110,11 @@
 .description {
   margin: 0;
 
-  color: var(--color-text--sub);
+  color: color-mix(
+    in srgb,
+    var(--color-primary) 35%,
+    var(--color-primary-contrast) 90%
+  );
 
   font-size: var(--font-size-400);
   line-height: 2.3;
