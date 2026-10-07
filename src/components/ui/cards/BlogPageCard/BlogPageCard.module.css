@@ -2,6 +2,7 @@
   min-inline-size: 0;
   /* min-block-size: 40rem; */
   /* overflow: hidden; */
+
   display: grid;
   gap: 0.3rem;
 

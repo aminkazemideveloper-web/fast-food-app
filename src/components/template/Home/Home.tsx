@@ -18,8 +18,8 @@ function Home() {
       <VisualFood />
       <AboutSection />
       <VisualFood />
-      <BlogSection />
       <Services />
+      <BlogSection />
     </div>
   );
 }

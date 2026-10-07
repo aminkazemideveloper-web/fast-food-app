@@ -4,14 +4,19 @@
   max-inline-size: 100%;
   min-inline-size: 0;
   block-size: 100%;
-
+  /* 
   border: 2px solid
-    color-mix(in srgb, var(--color-primary-contrast) 60%, transparent);
+    color-mix(in srgb, var(--color-primary-contrast) 60%, transparent); */
 
-  border-radius: 1rem;
+  border-radius: 0.12rem;
   padding: 1rem;
-  background-color: var(--color-background);
-
+  /* background-color: var(--color-background); */
+  /* background-color: red; */
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 96%,
+    transparent
+  );
   .content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -25,6 +30,8 @@
       aspect-ratio: 16 / 10;
       border-radius: 0.7rem;
       overflow: hidden;
+      box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.1) 0px 0px 10px 0
+        var(--color-primary) 0px 0px 5px 0 rgba(0, 0, 0, 0.3);
 
       > img {
         display: block;
@@ -89,10 +96,10 @@
             font-size: var(--font-size-300);
             font-weight: 300;
             color: color-mix(
-      in srgb,
-      var(--color-primary) 35%,
-      var(--color-primary-contrast) 90%
-    );
+              in srgb,
+              var(--color-primary) 35%,
+              var(--color-primary-contrast) 90%
+            );
           }
 
           > p {
